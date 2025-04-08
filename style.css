@@ -1,0 +1,305 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+
+
+/* ESTILIZAÇÃO PARA A PÁGINA DE LOGIN */
+
+body.login {
+    height: 100vh;
+    background: linear-gradient(to bottom, #9f99e6, #2e2b88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-login {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 400px;
+}
+
+.background-login h1 {
+    margin-bottom: 50px;
+    font-size: 28px;
+    color: white;
+}
+
+.background-login label {
+    display: block;
+    text-align: left;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.background-login input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.background-login input:focus {
+    background: white;
+    box-shadow: 0 0 0 2px #6c63ff;
+}
+
+.senha_div{
+    position: relative;
+}
+
+.revelar_senha{
+    position: absolute;
+    top: 30px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+}
+
+.btn_link{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.btn_link button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.btn_link:first-of-type button{
+    background-color: white;
+    color: #2e2b88;
+}
+
+.btn_link:first-of-type button:hover {
+    background-color: #e2e2e2;
+}
+
+.button2 {
+    background: none;
+    color: white;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.button2:hover {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.cadastro{
+    padding-top: 20px;
+}
+
+
+
+
+
+
+
+
+/* ESTILIZAÇÃO PARA A PÁGINA DE CADASTRO */
+
+body.cadastro {
+    height: 100vh;
+    background: linear-gradient(to bottom, #9f99e6, #2e2b88);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.background-cadastro {
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 1200px;
+}
+
+.organizer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.background-cadastro h1 {
+    margin-bottom: 50px;
+    font-size: 28px;
+    color: black;
+}
+
+.background-cadastro label {
+    display: block;
+    text-align: left;
+    color: black;
+    font-weight: 500;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.background-cadastro input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.background-cadastro input:focus {
+    background: white;
+    box-shadow: 0 0 0 2px #6c63ff;
+}
+
+.cadastro_buttons{
+    display: flex;
+    justify-content: space-around;
+}
+
+.cadastro_buttons button{
+    padding: 10px;
+    width: 100px;
+}
+
+.esquerda{
+    width: 45%;
+}
+
+.direita{
+    width: 45%;
+}
+
+.genero{
+    display: flex; 
+    gap: 30px; 
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.genero label{
+    display: flex; 
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: black;
+    cursor: pointer;
+}
+
+.genero input[type="radio"]{
+    width: 18px;
+    height: 18px;
+    accent-color: #6c63ff;
+    cursor: pointer;
+}
+
+.genero_div{
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*RESPONSIVIDADE*/
+
+
+/* Tablets */
+@media (max-width: 992px) {
+    .background-cadastro {
+        padding: 30px;
+        width: 95%;
+    }
+
+    .organizer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .organizer > div {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .cadastro_buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn_link button {
+        width: 200px;
+    }
+}
+
+/* Celulares */
+@media (max-width: 768px) {
+    .organizer {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cadastro_buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn_link button {
+        width: 100%;
+    }
+
+    .radio_group {
+        gap: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
