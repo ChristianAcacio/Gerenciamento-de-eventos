@@ -276,7 +276,7 @@ header input:focus {
 
 .slider {
     width: 100%;
-    height: 70vh;
+    height: 90vh;
     overflow: hidden;
     position: relative;
     margin: 0;
@@ -419,6 +419,12 @@ header input:focus {
 .background-eventos img{
     border-radius: 20px;
 }
+
+.dia_do_evento {
+    font-size: 14px;
+    color: #ffffff;
+
+  }
 
 .eventos-maiores{
     display: flex;
