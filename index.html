@@ -11,8 +11,8 @@
     
     <header>
 
-        <picture>
-            <img src="#" alt="LOGO DO SITE">
+        <picture class="logo" onclick="mostrar_menu()">
+            <img class="logo_img" src="img/Logo.jpeg" alt="LOGO DO SITE">
         </picture>
 
         <div>
@@ -32,7 +32,17 @@
             </form>
         </div>
 
+        <div id="menu" class="menu">
+            <div class="menu-content">
+                <span>Meus Eventos</span>
+                <span>Cadastrar</span>
+                <button onclick="fechar_menu()">OK</button>
+              </div>
+        </div>
+
     </header>
+
+
 
 
 
@@ -147,7 +157,7 @@
             </div>
 
             <div class="background-eventos">
-
+                
                 <h2>Juaforró 03/04</h2>
 
                 <picture>
@@ -164,9 +174,6 @@
             </div>
 
         </div>
-
-
-
 
     </main>
 

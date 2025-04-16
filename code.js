@@ -17,3 +17,13 @@ setInterval(() => {
   document.querySelector('.slides-box').offsetHeight;
   document.querySelector('.slides-box').style.animation = null;
 }, 10000);
+
+
+//ABRIR E FECHAR MENUS 
+function mostrar_menu() {
+  document.getElementById("menu").style.display = "flex";
+}
+
+function fechar_menu() {
+  document.getElementById("menu").style.display = "none";
+}
