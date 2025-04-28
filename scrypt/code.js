@@ -20,10 +20,15 @@ setInterval(() => {
 
 
 //ABRIR E FECHAR MENUS 
-function mostrar_menu() {
-  document.getElementById("menu").style.display = "flex";
+function pagamento() {
+  document.getElementById("pagamento").style.display = "flex";
 }
 
-function fechar_menu() {
-  document.getElementById("menu").style.display = "none";
+function concluido(){
+  document.getElementById("pagamento").style.display = "none";
+  document.getElementById("concluido").style.display = "flex";
+}
+
+function fechar() {
+  document.getElementById("pagamento").style.display = "none";
 }

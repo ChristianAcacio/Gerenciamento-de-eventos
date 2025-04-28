@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expocrato 2025</title>
+    <link rel="stylesheet" href="style/style.css">
+    <script async src="scrypt/code.js"></script>
+</head>
+<body class="principal">
+
+        
+    <header>
+
+        <picture class="logo" onclick="mostrar_menu()">
+            <a href="index.html">
+                <img class="logo_img" src="style/img/Logo.jpeg" alt="LOGO DO SITE">
+            </a>
+        </picture>
+
+        <div>
+            <form action="#" class="search">
+
+                <div>
+                    <input name="pesquisa" type="list" placeholder="Buscar Eventos">
+                </div>
+
+                <div>
+                    <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
+                    <datalist id="cidades">
+                    <option value="Juazeiro do Norte">
+                    </datalist>
+                </div>
+
+            </form>
+        </div>
+
+
+
+    </header>
+
+
+
+
+    <section class="evento-destaque">
+        <div class="imagem">
+            <img src="style/img/Expocrato_descricao.png" alt="Expocrato 2025">
+        </div>
+
+        <div class="informacoes">
+            <div class="informacoes_info">
+                <h2>Expocrato 2025</h2>
+                <p><strong>Data:</strong> 30/03/2025</p>
+                <p><strong>Início:</strong> 18:00</p>
+                <p><strong>Valor:</strong> 20,00$</p>
+            </div>
+            <div class="informacoes_botao" onclick="pagamento()">
+                <a href="#" class="botao">Clique Para Participar</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="descricao">
+        <hr>
+        <p>
+            A espera acabou! O maior evento de música e cultura do interior do Ceará já tem data marcada para agitar o Cariri. 
+            A Expocrato 2025 acontece de 11 a 20 de julho, no Parque de Exposições Pedro Felício Cavalcante, no Crato. 
+            Prepare-se para viver 9 noites inesquecíveis (exceto no dia 14) com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
+        </p>
+    </section>
+
+
+    <div id="pagamento" class="pagamento">
+        <div class="pagamento_content">
+
+            <div class="qrcode">
+                <picture>
+                    <img src="style/img/qrcode.png" alt="Qr code">
+                </picture>
+
+                <div class="qrcode_texto">
+                    <span>
+                        Acesse seu APP de pagamentos  
+                    </span>
+                    <span>
+                        e faça a leitura do QR Code ao lado
+                    </span>
+                    <span>
+                        para efetuar o pagamento.
+                    </span>
+                </div>
+            </div>
+
+            <div class="pagamento_pix">
+
+                <span>
+                    Código pagamento PIX:
+                </span>
+
+                <div class="pagamento_codigo">
+                    <input type="text" value="00000000000000000000000000000" readonly class="codigo">
+
+                    <button onclick="concluido()">
+                        Copiar Codigo
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="concluido" class="concluido">
+
+        <picture>
+            <img src="style/img/certinho.png" alt="Certo">
+        </picture>
+
+        <button onclick="fechar()">
+            Fechar
+        </button>
+
+    </div>
+
+</body>
+</html>
