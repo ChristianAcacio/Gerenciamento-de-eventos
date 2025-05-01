@@ -1,41 +1,49 @@
 <?php
-// Conecta ao banco de dados 
+session_start();
 include("conexao.php");
-        
-// Verifica o método POST
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recebe os dados do formulário
-    $nome = $_POST['nome'];
+    $cpf = $_POST['cpf'];
+    $nome = $_POST['Nome'];
     $email = $_POST['email'];
     $senha = $_POST['senha'];
-    $data_nascimento = $_POST['data_nascimento'];
+    $data_nascimento = $_POST['data'];
     $genero = $_POST['genero'];
     $cep = $_POST['cep'];
     $cidade = $_POST['cidade'];
-    $bairro = $_POST['bairro'];
-    $estado = $_POST['estado'];
+    $bairro = $_POST['Bairro'];
+    $estado = $_POST['Estado'];
 
-    // Criptografia, converte a senha em um hash seguro, usando o brcrypt, PLACEHOLDER
+    // Criptografando a senha
     $senha_hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    // Prepara a inserção dos dados no banco, VERIFICAR QUAL O NOME CORRETO DA TABELA NO BANCO
-    $stmt = $conexao->prepare("
-        INSERT INTO usuarios (nome, email, senha, data_nascimento, genero, cep, cidade, bairro, estado)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
-    ");
-    
-    // Associa os parâmetros à query
-    $stmt->bind_param("sssssssss", $nome, $email, $senha_hash, $data_nascimento, $genero, $cep, $cidade, $bairro, $estado);
+    // Monta a query com placeholders
+    $sql = "INSERT INTO cadastro_usuario (cpf, nome, email, nascimento, genero, cep, cidade, bairro, uf, senha)
+            VALUES (:cpf, :nome, :email, :nascimento, :genero, :cep, :cidade, :bairro, :uf, :senha)";
 
-    // Executa e verifica se deu certo
+    // Prepara a query
+    $stmt = $conexao->prepare($sql);
+
+    // Associa os parâmetros
+    $stmt->bindParam(':cpf', $cpf);
+    $stmt->bindParam(':nome', $nome);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':nascimento', $data_nascimento);
+    $stmt->bindParam(':genero', $genero);
+    $stmt->bindParam(':cep', $cep);
+    $stmt->bindParam(':cidade', $cidade);
+    $stmt->bindParam(':bairro', $bairro);
+    $stmt->bindParam(':uf', $estado);
+    $stmt->bindParam(':senha', $senha_hash);
+
+    // Executa e verifica
     if ($stmt->execute()) {
-        echo "Usuário cadastrado com sucesso.";
+        $_SESSION['mensagem'] = "Usuário cadastrado com sucesso!";
     } else {
-        echo "Erro ao cadastrar: " . $stmt->error;
+        $_SESSION['mensagem'] = "Erro ao cadastrar usuário.";
     }
 
-    // Fecha a conexão e o banco
-    $stmt->close();
-    $conexao->close();
+    header("Location: ../Register.php");
+    exit;
 }
 ?>
