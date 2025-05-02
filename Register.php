@@ -85,7 +85,7 @@
             </div>
 
             <div class="cadastro_buttons" style="margin-top: 30px;">
-                <a href="login.html" class="btn_link">Voltar</a>
+                <a href="login.php" class="btn_link">Voltar</a>
                 <button type="submit" class="btn_link" >Cadastrar</button>
             </div>
 
