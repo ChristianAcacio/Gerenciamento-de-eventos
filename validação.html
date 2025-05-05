@@ -18,11 +18,7 @@
             </a>
         </picture>
 
-        <div class="validação_titulo">
-            <h1>
-                Eventos Pendentes de Validação
-            </h1>
-        </div>
+
 
         <div>
 
@@ -37,9 +33,16 @@
 
 
     <main>
+
+        <div class="validação_titulo">
+            <h1>
+                Eventos Pendentes de Validação
+            </h1>
+        </div>
+
         <div>
 
-            <div class="background_validação">
+            <div class="background_validação" id="evento01">
 
                 <div class="validação_imagem">
                     <h2>Expocrato 01/04</h2>
@@ -58,15 +61,23 @@
 
                     <div class="opções">
 
-                        <span class="aprovar">APROVAR</span>
+                        <span class="aprovar" onclick="aprovar('evento01')">APROVAR</span>
 
-                        <span class="rejeitar">REJEITAR</span>
+                        <span class="rejeitar" onclick="rejeitar('evento01')">REJEITAR</span>
 
                     </div>
                 </div>
+
+                <div class="aprovado_texto">
+                    <h3>Aprovado</h3>
+                </div>
+                <div class="rejeitado_texto">
+                    <h3>Rejeitado</h3>
+                </div> 
+
             </div>
 
-            <div class="background_validação">
+            <div class="background_validação" id="evento02">
 
                 <div class="validação_imagem">
                     <h2>Expocrato 01/04</h2>
@@ -85,15 +96,23 @@
 
                     <div class="opções">
 
-                        <span class="aprovar">APROVAR</span>
+                        <span class="aprovar" onclick="aprovar('evento02')">APROVAR</span>
 
-                        <span class="rejeitar">REJEITAR</span>
+                        <span class="rejeitar" onclick="rejeitar('evento02')">REJEITAR</span>
 
                     </div>
                 </div>
+
+                <div class="aprovado_texto">
+                    <h3>Aprovado</h3>
+                </div>
+                <div class="rejeitado_texto">
+                    <h3>Rejeitado</h3>
+                </div> 
+
             </div>
 
-            <div class="background_validação">
+            <div class="background_validação" id="evento03">
 
                 <div class="validação_imagem">
                     <h2>Expocrato 01/04</h2>
@@ -109,15 +128,30 @@
                         Pedro Felício Cavalcante, no Crato. Prepare-se para viver 9 noites inesquecíveis (exceto no dia 14) 
                         com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
                     </p>
+                    
 
                     <div class="opções">
 
-                        <span class="aprovar">APROVAR</span>
+                        <span class="aprovar" onclick="aprovar('evento03')">APROVAR</span>
 
-                        <span class="rejeitar">REJEITAR</span>
+                        <span class="rejeitar" onclick="rejeitar('evento03')">REJEITAR</span>
 
                     </div>
                 </div>
+
+                <div class="aprovado_texto">
+                    <h3>Aprovado</h3>
+                    <picture>
+                        <img src="style/img/certinho.png" alt="Aprovado">
+                    </picture>
+                </div>
+                <div class="rejeitado_texto">
+                    <h3>Rejeitado</h3>
+                    <picture>
+                        <img src="style/img/rejeitado.png" alt="Rejeitado">
+                    </picture>
+                </div> 
+
             </div>
 
         </div>

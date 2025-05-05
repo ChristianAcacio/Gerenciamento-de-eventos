@@ -36,3 +36,14 @@ function fechar(){
 function mostrar_menu(){
   document.getElementById("menu_nav").style.display = "flex";
 }
+
+
+//Aprovar e rejeitar eventos
+
+function aprovar(evento){
+  document.getElementById(evento).className = "aprovado";
+}
+
+function rejeitar(evento){
+  document.getElementById(evento).className = "rejeitado";
+}
