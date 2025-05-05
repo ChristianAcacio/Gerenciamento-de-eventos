@@ -12,11 +12,13 @@
         
     <header>
 
-        <picture class="logo" onclick="mostrar_menu()">
-            <a href="index.html">
-                <img class="logo_img" src="style/img/Logo.jpeg" alt="LOGO DO SITE">
-            </a>
-        </picture>
+        <div>
+            <picture class="logo" onclick="mostrar_menu()">
+                <a href="index.html">
+                    <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
+                </a>
+            </picture>
+        </div>
 
         <div>
             <form action="#" class="search">
@@ -34,9 +36,6 @@
 
             </form>
         </div>
-
-
-
     </header>
 
 
@@ -100,7 +99,7 @@
                 <div class="pagamento_codigo">
                     <input type="text" value="00000000000000000000000000000" readonly class="codigo">
 
-                    <button onclick="concluido()">
+                    <button class="button_copiar" onclick="concluido()">
                         Copiar Codigo
                     </button>
                 </div>
@@ -116,15 +115,15 @@
                 Inscrição feita com sucesso
             </h2>
 
-            <div>
+
                 <picture>
                     <img src="style/img/certinho.png" alt="Certo">
                 </picture>
 
-                <button onclick="fechar()">
+                <button class="botao_concluido" onclick="fechar()">
                     Fechar
                 </button>
-            </div>
+
         </div>
     </div>
 

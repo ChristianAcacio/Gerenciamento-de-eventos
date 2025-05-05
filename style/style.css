@@ -248,6 +248,8 @@ body.cadastro {
 
 /* ESTILIZAÇÃO PARA A PÁGINA Princiapal*/
 
+
+
 body.principal{
     background-color: #333;
 }
@@ -296,7 +298,7 @@ header input:focus {
 
 .slider {
     width: 100%;
-    height: 90vh;
+    height: 80vh;
     overflow: hidden;
     position: relative;
     margin: 0;
@@ -476,6 +478,52 @@ header input:focus {
 .background-eventos button:hover {
     transform: scale(1.05);
 }
+
+.menu_nav{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: start;
+    align-items: start;
+    z-index: 1000;
+}
+
+.menu_nav_content{
+    background: #6c63ff;
+    padding: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.menu_nav_content a{
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease;
+}
+
+.menu_nav_content a:hover{
+    cursor: pointer;
+    transform: scale(1.07);
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -694,11 +742,43 @@ header input:focus {
     border-radius: 12px;
     text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .concluido_content img{
     width: 100px;
     height: auto;
+}
+
+.botao_concluido{
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.botao_concluido:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.button_copiar{
+    padding: 5px;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.6);
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.button_copiar:hover{
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 
