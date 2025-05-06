@@ -273,6 +273,8 @@ header{
 .search{
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
     gap: 15px;
 }
 
@@ -291,6 +293,33 @@ header input {
 header input:focus {
     background: white;
     box-shadow: 0 0 0 2px #6c63ff;
+}
+
+.nav_pc a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.nav_pc ol{
+    text-decoration: none;
+    transition: 0.5s ease;
+}
+
+.nav_pc ol:hover{
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+
+.nav_pc{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 10px;
+
 }
 
 
@@ -335,8 +364,8 @@ header input:focus {
 
 @media (min-width: 1200px) {
     .slide-box img {
-        width: 100%;
-        height: auto;
+        width: 75%;
+        height:auto;
     }
 }
 
@@ -683,6 +712,27 @@ header input:focus {
 
 
 /*ESTILIZAÇÃO PARA A DESCRICAO*/
+
+/*Deixando todos nulos, so aparece quando chamado*/
+
+.expocrato{
+    display: none;
+}
+.paudabandeira{
+    display: none;
+}
+.juaforro{
+    display: none;
+}
+.romaria{
+    display: none;
+}
+
+
+
+
+
+
 .evento-destaque {
     display: flex;
     justify-content: center;
