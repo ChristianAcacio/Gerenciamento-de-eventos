@@ -729,35 +729,13 @@ header input:focus {
     display: none;
 }
 
-.expocrato_ativo .evento-destaque{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 50px;
-    padding: 50px;
-    background-color: #2c2c3c;
-}
 
-.expocrato_ativo .imagem img {
-    width: 600px;
-    height: auto;
-    border-radius: 10px;
-}
 
-.expocrato_ativo .informacoes {
-    background-color: #393951;
-    padding: 30px;
-    border-radius: 10px;
-    color: white;
-    width: 600px;
-    height: 405px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    gap: 10px;
-}
+
+
+
+
+
 
 
 
