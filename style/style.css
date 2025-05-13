@@ -1017,6 +1017,33 @@ body.principal {
   }
 
 
+/*Estilo CRIAÇÃO DE EVENTOS*/
+
+  .cadastro-evento {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    height: 80%;
+    background-color: #454545;
+    color: white;
+    border-radius: 15px;
+    padding: 50px;
+    gap: 20px;
+}
+
+  .background-cadastro-evento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+    .cadastro-evento-esquerda{
+        gap: 100px;
+    }
+
+
+
 
 
 

@@ -62,64 +62,66 @@
 
 
 
-    <main>
+    <main class="background-cadastro-evento">
+        <div  class="cadastro-evento">
+            <div class="cadastro-evento-esquerda">
 
-        <div>
+                <h1>Cadastre seu evento</h1>
 
-            <h1>Cadastre seu evento</h1>
+                <div>
+                    <form action="#">
 
-            <div>
-                <form action="#">
-
-                    <div>
-                        <label for="nome">Nome: </label>
-                        <input type="text" placeholder="Nome do seu evento">
-                    </div>
-
-
-                    <div>
-                        <label for="data">Data: </label>
-                        <input type="date" placeholder="Data de inicio">
-                        <span>até</span>
-                        <input type="date" placeholder="Data de fim">
-                    </div>
-
-                    <div>
-                        <label for="entrada">Entrada: </label>
                         <div>
-                            <label><input type="radio" name="entrada" value="Gratuito"><span>Gratuito</span></label>
-                            <label><input type="radio" name="entrada" value="Pago"><span>Pago</span></label>
+                            <label for="nome">Nome: </label>
+                            <input type="text" placeholder="Nome do seu evento">
                         </div>
-                    </div>
 
-                    <div>
-                        <label for="valor">Valor do evento: </label>
-                        <input type="text" placeholder="R$00,00">
-                    </div>
-                </form>
+
+                        <div>
+                            <label for="data">Data: </label>
+                            <input type="date" placeholder="Data de inicio">
+                            <span>até</span>
+                            <input type="date" placeholder="Data de fim">
+                        </div>
+
+                        <div>
+                            <label for="entrada">Entrada: </label>
+                            <div>
+                                <label><input type="radio" name="entrada" value="Gratuito"><span>Gratuito</span></label>
+                                <label><input type="radio" name="entrada" value="Pago"><span>Pago</span></label>
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="valor">Valor do evento: </label>
+                            <input type="text" placeholder="R$00,00">
+                        </div>
+                    </form>
+                </div>
+
             </div>
 
-        </div>
 
 
 
-
-        <div>
             <div>
-                <label for="imagem">Arraste para adicionar as imagens: </label>
-                <input type="file">
-            </div>
+                <div>
+                    <label for="imagem">Arraste para adicionar as imagens: </label>
+                    <input type="file">
+                </div>
 
-            <div>
-                <label for="detalhes">Detalhe todas as informações do evento: </label>
-                <input type="text">
+                <div>
+                    <label for="detalhes">Detalhe todas as informações do evento: </label>
+                    <input type="text">
+                </div>
+            
+
+                <button>
+                    Criar evento
+                </button>
+
             </div>
         </div>
-
-        <button>
-            Criar evento
-        </button>
-
     </main>
 
 
