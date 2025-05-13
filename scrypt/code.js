@@ -5,6 +5,7 @@ function Mostrar_senha(){
 }
 
 
+
 //SLIDE CARROSEL
 let contador = 1;
 document.getElementById("radio1").checked = true;
@@ -17,6 +18,7 @@ setInterval(() => {
   document.querySelector('.slides-box').offsetHeight;
   document.querySelector('.slides-box').style.animation = null;
 }, 10000);
+
 
 
 //ABRIR E FECHAR MENUS 
@@ -38,6 +40,7 @@ function mostrar_menu(){
 }
 
 
+
 //Aprovar e rejeitar eventos
 
 function aprovar(evento){
@@ -46,4 +49,19 @@ function aprovar(evento){
 
 function rejeitar(evento){
   document.getElementById(evento).className = "rejeitado";
+}
+
+
+//Mostar descrição conforme o evento selecionado
+
+window.onload = function () {
+  const params = new URLSearchParams(window.location.search);
+  const evento = params.get("evento");
+
+  if (evento) {
+      const elemento = document.getElementById("expocrato");
+      if (elemento) {
+          elemento.classList.add(evento);
+      }
+  }
 }
