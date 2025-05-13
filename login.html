@@ -10,23 +10,24 @@
 <body class="login">
     
     <main>
-
+        
         <div class="background-login">
 
             <h1>
                 Login
             </h1>
-
-            <div>
+            <form action="index.html"></form>
                 <div>
-                    <label for="">CPF</label>
-                    <input type="text" placeholder="000.000.000-00">
-                </div>
+                    <div>
+                        <label for="">CPF</label>
+                        <input type="text" placeholder="000.000.000-00" required>
+                    </div>
 
-                <div class="senha_div">
-                    <label for="">SENHA</label>
-                    <input type="password" id="senha" placeholder="Digite sua senha">
-                    <span class="revelar_senha" onclick="Mostrar_senha()">👁️</span>
+                    <div class="senha_div">
+                        <label for="">SENHA</label>
+                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                        <span class="revelar_senha" onclick="Mostrar_senha()">👁️</span>
+                    </div>
                 </div>
 
                 <div class="cadastro">
@@ -35,16 +36,20 @@
                             Entrar
                         </button>
                     </a>
-
-                    <a href="Register.html" class="btn_link">
-                        <button class="button2">
-                            Criar conta
-                        </button>
-                    </a>
                 </div>
-            </div>
+        </form>
 
+
+
+            <div>
+                <a href="Register.html" class="btn_link">
+                    <button class="button2">
+                        Criar conta
+                    </button>
+                </a>
+            </div>
         </div>
+
 
     </main>
 
