@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,48 +9,42 @@
     <script async src="scrypt/code.js"></script>
 </head>
 <body class="login">
+
+    <?php
+    if (isset($_SESSION['mensagem'])) {
+        echo "<script>alert('" . addslashes($_SESSION['mensagem']) . "');</script>";
+        unset($_SESSION['mensagem']);
+    }
+    ?>
     
     <main>
-        
+
         <div class="background-login">
 
             <h1>
                 Login
             </h1>
-            <form action="index.html">
+            <form action="php/validarLogin.php" method="POST">
                 <div>
                     <div>
                         <label for="">CPF</label>
-                        <input type="text" placeholder="000.000.000-00" required>
+                        <input type="text" name="usuario" placeholder="000.000.000-00">
                     </div>
 
                     <div class="senha_div">
                         <label for="">SENHA</label>
-                        <input type="password" id="senha" placeholder="Digite sua senha" required>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
                         <span class="revelar_senha" onclick="Mostrar_senha()">👁️</span>
                     </div>
-                </div>
 
-                <div class="cadastro">
-                    <a href="index.html" class="btn_link">
-                        <button>
-                            Entrar
-                        </button>
-                    </a>
+                    <div class="cadastro">
+                        <button class="btn_link" type="submit">Entrar</button>
+                        <a href="Register.php" class="btn_link">Criar conta</a>
+                    </div>
                 </div>
             </form>
 
-
-
-            <div>
-                <a href="Register.html" class="btn_link">
-                    <button class="button2">
-                        Criar conta
-                    </button>
-                </a>
-            </div>
         </div>
-
 
     </main>
 
