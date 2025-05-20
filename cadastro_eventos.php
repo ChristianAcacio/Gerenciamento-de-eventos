@@ -1,133 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Eventos</title>
     <link rel="stylesheet" href="style/style.css">
-    <title>Cadastro de eventos</title>
 </head>
 <body class="principal">
-    
+
     <header class="header">
+        <a href="index.html" class="logo">
+            <img class="logo_img" src="style/img/Logo.png" alt="Logo do site">
+        </a>
 
-        <picture class="logo">
-            <a href="index.html">
-                <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
-            </a>
-        </picture>
-
-        <div>
-
+        <nav>
             <ul class="nav_pc">
-                <ol>
-                    <a href="Meus_eventos.html">Meus eventos</a>
-                </ol>
-
-                <ol>
-                    <a href="#">Cadastrar um evento</a>
-                </ol>
-
-                <ol>
-                    <a href="validação.html">Validação de evetos</a>
-                </ol>
+                <li><a href="Meus_eventos.php">Meus eventos</a></li>
+                <li><a href="validacao.php">Validação de eventos</a></li>
             </ul>
+        </nav>
 
-        </div>
+        <form action="#" class="search">
+            <input name="pesquisa" type="search" placeholder="Buscar Eventos">
 
-        <div>
-            <form action="#" class="search">
+            <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
+            <datalist id="cidades">
+                <option value="Juazeiro do Norte">
+            </datalist>
+        </form>
 
-                <div>
-                    <input name="pesquisa" type="list" placeholder="Buscar Eventos">
-                </div>
-
-                <div>
-                    <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
-                    <datalist id="cidades">
-                      <option value="Juazeiro do Norte">
-                    </datalist>
-                </div>
-
-            </form>
-        </div>
-
-        <div class="menu_nav" id="menu_nav">
+        <nav class="menu_nav" id="menu_nav">
             <div class="menu_nav_content">
                 <a href="validação.html">Validação de eventos</a>
                 <a href="Meus_eventos.html">Meus eventos</a>
                 <a href="#">Cadastrar eventos</a>
             </div>
-        </div>
+        </nav>
     </header>
 
-
-
     <main class="background-cadastro-evento">
-        <div  class="cadastro-evento">
-            <div class="cadastro-evento-esquerda">
+        <section class="cadastro-evento">
+            <form action="php/processa_cadastro_evento.php" method="POST" enctype="multipart/form-data">
 
-                <h1>Cadastre seu evento</h1>
+                <div class="cadastro-evento-esquerda">
+                    <h1>Cadastre seu evento</h1>
 
-                <div>
-                    <form action="#"  class="evento-esquerda">
+                    <div>
+                        <label for="nome">Nome do Evento:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome do seu evento" required>
+                    </div>
 
-                        <div>
-                            <label for="nome">Nome: </label>
-                            <input type="text" placeholder="Nome do seu evento">
-                        </div>
+                    <div>
+                        <label for="data_inicio">Data:</label>
+                        <input type="date" id="data_inicio" name="data_inicio" required>
+                        <span>até</span>
+                        <input type="date" id="data_fim" name="data_fim" required>
+                    </div>
 
+                    <fieldset>
+                        <legend>Entrada:</legend>
+                        <label><input type="radio" name="entrada" value="Gratuito" required> Gratuito</label>
+                        <label><input type="radio" name="entrada" value="Pago"> Pago</label>
+                    </fieldset>
 
-                        <div>
-                            <label for="data">Data: </label>
-                            <input type="date" placeholder="Data de inicio">
-                            <span>até</span>
-                            <input type="date" placeholder="Data de fim">
-                        </div>
-
-                        <div>
-                            <label for="entrada">Entrada: </label>
-                            <div>
-                                <label><input type="radio" name="entrada" value="Gratuito"><span>Gratuito</span></label>
-                                <label><input type="radio" name="entrada" value="Pago"><span>Pago</span></label>
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="valor">Valor do evento: </label>
-                            <input type="text" placeholder="R$00,00">
-                        </div>
-                    </form>
+                    <div>
+                        <label for="valor">Valor do Evento:</label>
+                        <input type="text" id="valor" name="valor" placeholder="R$ 00,00">
+                    </div>
                 </div>
 
-            </div>
+                <div class="cadastro-evento-direita">
+                    <div>
+                        <label for="imagem">Imagem do Evento:</label>
+                        <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                    </div>
 
+                    <div>
+                        <label for="descricao">Descrição Detalhada:</label>
+                        <textarea id="descricao" name="descricao" placeholder="Detalhe todas as informações do evento" required></textarea>
+                    </div>
 
-
-
-            <div>
-                <div>
-                    <label for="imagem">Arraste para adicionar as imagens: </label>
-                    <input type="file">
+                    <div>
+                        <button type="submit">Criar Evento</button>
+                    </div>
                 </div>
 
-                <div>
-                    <label for="detalhes">Detalhe todas as informações do evento: </label>
-                    <input type="text">
-                </div>
-            
-
-                <button>
-                    Criar evento
-                </button>
-
-            </div>
-        </div>
+            </form>
+        </section>
     </main>
-
-
-
-
-
 
 </body>
 </html>
