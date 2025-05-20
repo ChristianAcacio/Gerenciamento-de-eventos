@@ -28,7 +28,7 @@
                 <div>
                     <div>
                         <label for="">CPF</label>
-                        <input type="text" name="usuario" placeholder="000.000.000-00">
+                        <input type="text" name="usuario" placeholder="000.000.000-00" maxlength="11">
                     </div>
 
                     <div class="senha_div">
@@ -38,12 +38,13 @@
                     </div>
 
                     <div class="cadastro">
-                        <button class="btn_link" type="submit">Entrar</button>
-                        <a href="Register.php" class="btn_link">Criar conta</a>
+                        <a href="index.html" class="btn_link"><button class="btn_link" type="submit">Entrar</button></a>
                     </div>
                 </div>
             </form>
-
+                <div class="cadastro">
+                    <a href="Register.php" class="btn_link"><button class="btn_link" type="submit">cadastre-se</button></a>
+                </div>
         </div>
 
     </main>
