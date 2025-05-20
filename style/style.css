@@ -1038,9 +1038,26 @@ body.principal {
     align-items: center;
 }
 
-    .cadastro-evento-esquerda{
-        gap: 100px;
-    }
+.cadastro-evento-esquerda{
+    gap: 100px;
+}
+
+.evento-esquerda{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.cadastro-evento-esquerda h1{
+    margin-bottom: 50px;
+}
+
+.cadastro-evento-esquerda input{
+    background-color: #a5a4a4;
+    height: 30px;
+}
+
+
 
 
 
