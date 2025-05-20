@@ -365,6 +365,7 @@ header input:focus {
 @media (min-width: 1200px) {
     .slide-box img {
         width: 75%;
+        max-width: 75%;
         height:auto;
     }
 }
@@ -733,6 +734,13 @@ header input:focus {
 
 
 
+
+
+
+
+
+
+
 .evento-destaque {
     display: flex;
     justify-content: center;
@@ -1007,6 +1015,50 @@ body.principal {
     text-align: left;
     padding-left: 10px;
   }
+
+
+/*Estilo CRIAÇÃO DE EVENTOS*/
+
+  .cadastro-evento {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    height: 80%;
+    background-color: #454545;
+    color: white;
+    border-radius: 15px;
+    padding: 50px;
+    gap: 20px;
+}
+
+  .background-cadastro-evento{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cadastro-evento-esquerda{
+    gap: 100px;
+}
+
+.evento-esquerda{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.cadastro-evento-esquerda h1{
+    margin-bottom: 50px;
+}
+
+.cadastro-evento-esquerda input{
+    background-color: #a5a4a4;
+    height: 30px;
+}
+
+
+
 
 
 

@@ -54,6 +54,17 @@ function rejeitar(evento){
 
 //Mostar descrição conforme o evento selecionado
 
-function descricao(evento){
-  document.getElementById(elemento).className = evento;
+window.onload = function () {
+  const params = new URLSearchParams(window.location.search);
+  const evento = params.get("evento");
+
+  if (evento) {
+      const elemento = document.getElementById("expocrato");
+      if (elemento) {
+          elemento.classList.add(evento);
+      }
+  }
 }
+
+// calendario
+
