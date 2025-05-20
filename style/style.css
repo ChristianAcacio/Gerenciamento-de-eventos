@@ -251,7 +251,7 @@ body.cadastro {
 
 
 body.principal{
-    background-color: #333;
+    background-color: #ffffff;
 }
 
 .logo{
@@ -1045,16 +1045,26 @@ body.principal {
 .evento-esquerda{
     display: flex;
     flex-direction: column;
-    gap: 100px;
+    gap: 80px;
 }
 
-.cadastro-evento-esquerda h1{
+.cadastro-evento h1{
     margin-bottom: 50px;
 }
 
-.cadastro-evento-esquerda input{
+.cadastro-evento input{
     background-color: #a5a4a4;
     height: 30px;
+}
+
+.cadastro-evento-direita{
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.cadastro-imagem button{
+    display: none;
 }
 
 
