@@ -11,7 +11,7 @@
   <header class="header">
 
     <picture class="logo">
-        <a href="index.html">
+        <a href="index.php">
             <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
         </a>
     </picture>
