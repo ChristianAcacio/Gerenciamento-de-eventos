@@ -9,7 +9,7 @@
 <body class="principal">
 
     <header class="header">
-        <a href="index.html" class="logo">
+        <a href="index.php" class="logo">
             <img class="logo_img" src="style/img/Logo.png" alt="Logo do site">
         </a>
 
@@ -40,7 +40,7 @@
 
     <main class="background-cadastro-evento">
         <section class="cadastro-evento">
-            <form action="php/processa_cadastro_evento.php" method="POST" enctype="multipart/form-data">
+            <form action="php/eventos.php" method="POST" enctype="multipart/form-data">
 
                 <div class="cadastro-evento-esquerda">
                     <h1>Cadastre seu evento</h1>
@@ -52,9 +52,7 @@
 
                     <div>
                         <label for="data_inicio">Data:</label>
-                        <input type="date" id="data_inicio" name="data_inicio" required>
-                        <span>até</span>
-                        <input type="date" id="data_fim" name="data_fim" required>
+                        <input type="date" id="data_inicio" name="data_evento" required>
                     </div>
 
                     <fieldset>

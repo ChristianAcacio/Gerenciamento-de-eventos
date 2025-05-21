@@ -13,24 +13,16 @@ http://localhost/Ger-nciamento-de-eventos/index.html<!DOCTYPE html>
     <header>
 
         <picture class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
             </a>
         </picture>
-
-
 
         <div>
 
         </div>
 
-
-
     </header>
-
-
-
-
 
     <main>
 
@@ -169,18 +161,5 @@ http://localhost/Ger-nciamento-de-eventos/index.html<!DOCTYPE html>
         </div>
 
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
