@@ -12,7 +12,7 @@
     <header class="header">
 
         <picture class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
             </a>
         </picture>
@@ -26,15 +26,15 @@
                 </ol>
 
                 <ol>
-                    <a href="Meus_eventos.html">Meus eventos</a>
+                    <a href="Meus_eventos.php">Meus eventos</a>
                 </ol>
 
                 <ol>
-                    <a href="cadastro_eventos.html">Cadastrar um evento</a>
+                    <a href="cadastro_eventos.php">Cadastrar um evento</a>
                 </ol>
 
                 <ol>
-                    <a href="validacao.html">Validação de evetos</a>
+                    <a href="validacao.php">Validação de evetos</a>
                 </ol>
             </ul>
 
@@ -59,17 +59,12 @@
 
         <div class="menu_nav" id="menu_nav">
             <div class="menu_nav_content">
-                <a href="validacao.html">Validação de eventos</a>
-                <a href="Meus_eventos.html">Meus eventos</a>
+                <a href="validacao.php">Validação de eventos</a>
+                <a href="Meus_eventos.php">Meus eventos</a>
                 <a href="#">Cadastrar eventos</a>
             </div>
         </div>
     </header>
-
-    
-
-
-
 
     <main>
 
