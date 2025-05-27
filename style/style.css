@@ -27,8 +27,8 @@ body.login {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
     padding: 50px;
-    border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
     text-align: center;
     width: 400px;
 }

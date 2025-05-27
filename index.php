@@ -8,7 +8,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDEX</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <script async src="scrypt/code.js"></script>
 </head>
 <body class="principal">
