@@ -6,41 +6,81 @@
     <title>Cadastro de Eventos</title>
     <link rel="stylesheet" href="style/style.css">
 </head>
+
 <body class="principal">
 
     <header class="header">
-        <a href="index.php" class="logo">
-            <img class="logo_img" src="style/img/Logo.png" alt="Logo do site">
-        </a>
 
-        <nav>
+        <picture class="logo">
+            <a href="index.php">
+                <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
+            </a>
+        </picture>
+
+        <div>
+
             <ul class="nav_pc">
-                <li><a href="Meus_eventos.php">Meus eventos</a></li>
-                <li><a href="validacao.php">Validação de eventos</a></li>
+
+
+                <ol>
+                    <a href="Meus_eventos.php">Meus eventos</a>
+                </ol>
+
+                <ol>
+                    <a href="cadastro_eventos.php">Cadastrar um evento</a>
+                </ol>
+
+                <ol>
+                    <a href="validacao.php">Validação de eventos</a>
+                </ol>
             </ul>
-        </nav>
 
-        <form action="#" class="search">
-            <input name="pesquisa" type="search" placeholder="Buscar Eventos">
+        </div>
 
-            <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
-            <datalist id="cidades">
-                <option value="Juazeiro do Norte">
-            </datalist>
-        </form>
+        <div>
+            <form action="#" class="search">
 
-        <nav class="menu_nav" id="menu_nav">
+                <div class="search_header">            
+                    <div>
+                        <input name="pesquisa" type="list" placeholder="Buscar Eventos">
+                    </div>
+
+
+                    <div>
+                        <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
+                        <datalist id="cidades">
+                        <option value="Juazeiro do Norte">
+                        </datalist>
+                    </div>
+                </div>
+
+                <div>
+                    <ul>
+                        <ol>
+                            <picture class="login_icone" >
+                                <a href="login.php">
+                                    <img class="login_icone_img" src="style/img/user-interface.png" alt="Imagem de login" >
+                                </a>
+                            </picture>
+                        </ol>
+                    </ul>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="menu_nav" id="menu_nav">
             <div class="menu_nav_content">
-                <a href="validação.html">Validação de eventos</a>
-                <a href="Meus_eventos.html">Meus eventos</a>
+                <a href="validacao.php">Validação de eventos</a>
+                <a href="Meus_eventos.php">Meus eventos</a>
                 <a href="#">Cadastrar eventos</a>
             </div>
-        </nav>
+        </div>
     </header>
 
     <main class="background-cadastro-evento">
-        <section class="cadastro-evento">
-            <form action="php/eventos.php" method="POST" enctype="multipart/form-data">
+        <section>
+            <form action="php/eventos.php" method="POST" enctype="multipart/form-data" class="cadastro-evento">
 
                 <div class="cadastro-evento-esquerda">
                     <h1>Cadastre seu evento</h1>
@@ -51,11 +91,11 @@
                     </div>
 
                     <div>
-                        <label for="data_inicio">Data:</label>
+                        <label for="data_inicio">Data do evento:</label>
                         <input type="date" id="data_inicio" name="data_evento" required>
                     </div>
 
-                    <fieldset>
+                    <fieldset class="fildset">
                         <legend>Entrada:</legend>
                         <label><input type="radio" name="entrada" value="Gratuito" required> Gratuito</label>
                         <label><input type="radio" name="entrada" value="Pago"> Pago</label>
@@ -70,26 +110,14 @@
                 <div class="cadastro-evento-direita">
                     <div>
                         <label for="imagem">Imagem do Evento:</label>
-                        <input type="file" id="imagem" name="imagem" accept="image/*" required>
+                        <input type="file" id="imagem" name="imagem" accept="image/*" required class="imagem_label">
                     </div>
 
-                    <div>
+                    <div class="textarea">
                         <label for="descricao">Descrição Detalhada:</label>
-                        <textarea id="descricao" name="descricao" placeholder="Detalhe todas as informações do evento" required></textarea>
+                        <textarea id="descricao" name="descricao" placeholder="Detalhe todas as informações do evento" required class="textarea_label"></textarea>
                     </div>
 
-<<<<<<< HEAD
-
-
-            <div class="cadastro-evento-direita">
-                <div class="cadastro-imagem">
-                    <label for="imagem">Arraste para adicionar as imagens: </label>
-                    <input type="file">
-=======
-                    <div>
-                        <button type="submit">Criar Evento</button>
-                    </div>
->>>>>>> origin/Back_end
                 </div>
 
             </form>

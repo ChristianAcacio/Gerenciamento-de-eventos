@@ -24,11 +24,11 @@
             <h1>
                 Login
             </h1>
-            <form action="php/validarLogin.php" method="POST">
+            <form action="php/validarLogin.php" method="POST" >
                 <div>
                     <div>
                         <label for="">CPF</label>
-                        <input type="text" name="usuario" placeholder="000.000.000-00" maxlength="11">
+                        <input type="text" name="usuario" placeholder="000.000.000-00" maxlength="11" >
                     </div>
 
                     <div class="senha_div">
@@ -43,7 +43,7 @@
                 </div>
             </form>
                 <div class="cadastro">
-                    <a href="Register.php" class="btn_link"><button class="btn_link" type="submit">cadastre-se</button></a>
+                    <a href="Register.php" class="button2"><button class="button2" type="submit">Cadastre-se</button></a>
                 </div>
         </div>
 
