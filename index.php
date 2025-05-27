@@ -24,7 +24,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
             <ul class="nav_pc">
                 <?php if ($tipo_usuario): ?>
                     <li><a href="php/logout.php">Logout</a></li>
-                    <li><a href="Meus_eventos.php">Meus eventos</a></li>
+                    <li><a href="Meus_eventos.php">Meus Eventos</a></li>
                     <?php if ($tipo_usuario === 'admin'): ?>
                         <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
                         <li><a href="validacao.php">Validação de eventos</a></li>
