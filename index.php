@@ -43,7 +43,39 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
             </datalist>
         </form>
 
-        <nav class="menu_nav" id="menu_nav">
+        <div>
+            <form action="#" class="search">
+
+                <div class="search_header">            
+                    <div>
+                        <input name="pesquisa" type="list" placeholder="Buscar Eventos">
+                    </div>
+
+
+                    <div>
+                        <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
+                        <datalist id="cidades">
+                        <option value="Juazeiro do Norte">
+                        </datalist>
+                    </div>
+                </div>
+
+                <div>
+                    <ul>
+                        <ol>
+                            <picture class="login_icone" >
+                                <a href="login.php">
+                                    <img class="login_icone_img" src="style/img/user-interface.png" alt="Imagem de login" >
+                                </a>
+                            </picture>
+                        </ol>
+                    </ul>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="menu_nav" id="menu_nav">
             <div class="menu_nav_content">
                 <a href="validacao.php">Validação de eventos</a>
                 <a href="Meus_eventos.php">Meus eventos</a>
