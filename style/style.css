@@ -78,13 +78,8 @@ body.login {
     color: #333;
 }
 
-.btn_link{
-    display: block;
-    text-decoration: none;
-    margin-bottom: 10px;
-}
 
-.btn_link button {
+.btn_link{
     width: 100%;
     padding: 10px;
     border: none;
@@ -92,16 +87,21 @@ body.login {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
+    margin-top: 10px;
     margin-bottom: 10px;
-}
-
-.btn_link:first-of-type button{
     background-color: white;
     color: #2e2b88;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.btn_link:first-of-type button:hover {
+
+
+.btn_link:hover {
     background-color: #e2e2e2;
+    transform: scale(1.05);
 }
 
 .button2 {
@@ -197,6 +197,7 @@ body.cadastro {
 
 .cadastro_buttons{
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -1066,10 +1067,7 @@ header input:focus {
 }
 
 .imagem_label{
-    width: 150px;
-    height: 150px;
-    background-color: #6c63ff;
-    border: 2px black;
+    text-decoration: none;
 }
 
 .textarea{
@@ -1081,8 +1079,13 @@ header input:focus {
     height: 150px;
 }
 
-.fieldset{
+.fildset{
     border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
 }
 
 .background-cadastro-evento{

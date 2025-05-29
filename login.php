@@ -37,9 +37,9 @@
                         <span class="revelar_senha" onclick="Mostrar_senha()">👁️</span>
                     </div>
 
-                    <div class="cadastro">
-                        <a href="index.html" class="btn_link"><button class="btn_link" type="submit">Entrar</button></a>
-                    </div>
+                    
+                    <a href="index.html" class="btn_link" type="submit">Entrar</a>
+
                 </div>
             </form>
                 <div class="cadastro">

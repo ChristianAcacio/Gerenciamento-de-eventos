@@ -118,7 +118,7 @@
 
         <div class="organizar-datas">
             <div class="datas-background">
-                <div class="datas">
+                <div class="datas" onclick="mostrar_evento('')">
                     <span>01/04</span>
                     <span>Terça-feira</span>
                 </div>
