@@ -10,29 +10,11 @@
 
     <header class="header">
 
-        <picture class="logo">
-            <a href="index.php">
-                <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
-            </a>
-        </picture>
-
-        <div>
-
-            <ul class="nav_pc">
-
-
-                <ol>
-                    <a href="Meus_eventos.php">Meus eventos</a>
-                </ol>
-
-                <ol>
-                    <a href="cadastro_eventos.php">Cadastrar um evento</a>
-                </ol>
-
-                <ol>
-                    <a href="validacao.php">Validação de eventos</a>
-                </ol>
-            </ul>
+    <picture class="logo">
+        <a href="index.html">
+            <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
+        </a>
+    </picture>
 
         </div>
 

@@ -45,6 +45,9 @@
                 <div class="cadastro">
                     <a href="Register.php" class="button2"><button class="button2" type="submit">Cadastre-se</button></a>
                 </div>
+                <div class="cadastro">
+                    <a href="php/recuperar_senha.php" class="button2"><button class="button2" type="submit">Esqueci minha senha</button></a>
+                </div>
         </div>
 
     </main>
