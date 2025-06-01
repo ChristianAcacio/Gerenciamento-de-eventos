@@ -129,7 +129,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
                     para agitar o Cariri. A Expocrato 2025 acontece de 11 a 20 de julho, no Parque de Exposições
                     Pedro Felício Cavalcante, no Crato.
                 </p>
-                <a href="Descricao.html?evento=expocrato_ativo"><button>Ver Detalhes</button></a>
+                <a href="Descricao.php?evento=expocrato_ativo"><button>Ver Detalhes</button></a>
             </article>
 
             <article class="background-eventos">
@@ -140,7 +140,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
                     padroeiro de Barbalha, no Ceará. Acontece anualmente com corte, transporte e hasteamento
                     do tronco, manifestações culturais e shows.
                 </p>
-                <a href="Descricao.html?evento=paudabandeira_ativo"><button>Ver Detalhes</button></a>
+                <a href="Descricao.php?evento=paudabandeira_ativo"><button>Ver Detalhes</button></a>
             </article>
 
             <article class="background-eventos">
@@ -150,7 +150,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
                     O Juaforró 2024 acontece de 19 a 23 de junho no Parque de Eventos Padre Cícero e é gratuito.
                     Com mais de 20 atrações musicais, quadrilhas, comidas típicas e cultura.
                 </p>
-                <a href="Descricao.html?evento=juaforro_ativo"><button>Ver Detalhes</button></a>
+                <a href="Descricao.php?evento=juaforro_ativo"><button>Ver Detalhes</button></a>
             </article>
 
         </section>

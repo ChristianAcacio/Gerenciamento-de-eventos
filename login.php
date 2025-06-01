@@ -24,7 +24,7 @@
             <h1>
                 Login
             </h1>
-            <form action="php/validarLogin.php" method="POST" >
+            <form action="php/validar_login.php" method="POST" >
                 <div>
                     <div>
                         <label for="">CPF</label>
