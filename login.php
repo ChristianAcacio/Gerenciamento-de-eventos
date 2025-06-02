@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +9,6 @@
     <script async src="scrypt/code.js"></script>
 </head>
 <body class="login">
-
-    <?php
-    if (isset($_SESSION['mensagem'])) {
-        echo "<script>alert('" . addslashes($_SESSION['mensagem']) . "');</script>";
-        unset($_SESSION['mensagem']);
-    }
-    ?>
-    
     <main>
 
         <div class="background-login">
@@ -38,7 +30,7 @@
                     </div>
 
                     <div class="cadastro">
-                        <a href="index.html" class="btn_link"><button class="btn_link" type="submit">Entrar</button></a>
+                        <a href="index.php" class="btn_link"><button class="btn_link" type="submit">Entrar</button></a>
                     </div>
                 </div>
             </form>
@@ -51,17 +43,5 @@
         </div>
 
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>
