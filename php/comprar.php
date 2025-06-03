@@ -2,10 +2,7 @@
 header('Content-Type: application/json');
 
 // Conexão com o banco
-$host = "localhost";
-$db = "cultura_hive";
-$user = "root";
-$pass = ""; 
+
 
 $conn = new mysqli($host, $user, $pass, $db);
 if ($conn->connect_error) {

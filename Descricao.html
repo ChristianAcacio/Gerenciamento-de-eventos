@@ -3,172 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expocrato 2025</title>
+    <title>Descrição do Evento</title>
     <link rel="stylesheet" href="style/style.css">
     <script async src="scrypt/code.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const params = new URLSearchParams(window.location.search);
+            const eventoId = params.get("evento");
+
+            const eventos = ["expocrato_ativo", "paudabandeira_ativo", "juaforro_ativo", "romaria_ativo"];
+
+            eventos.forEach(evento => {
+                const div = document.getElementById(evento);
+                if (div) {
+                    div.style.display = evento === eventoId ? "block" : "none";
+                }
+            });
+        });
+
+        function pagamento() {
+            document.getElementById("pagamento").style.display = "flex";
+        }
+    </script>
 </head>
+
+
+
 <body class="principal">
 
-      
-    <header>
+<header>
+    <div>
+        <picture class="logo">
+            <a href="index.html">
+                <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
+            </a>
+        </picture>
+    </div>
 
-        <div>
-            <picture class="logo">
-                <a href="index.html">
-                    <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
-                </a>
-            </picture>
-        </div>
-
-        <div>
-            <form action="#" class="search">
-
-                <div>
-                    <input name="pesquisa" type="list" placeholder="Buscar Eventos">
-                </div>
-
-                <div>
-                    <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
-                    <datalist id="cidades">
+    <div>
+        <form action="#" class="search">
+            <div>
+                <input name="pesquisa" type="list" placeholder="Buscar Eventos">
+            </div>
+            <div>
+                <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
+                <datalist id="cidades">
                     <option value="Juazeiro do Norte">
-                    </datalist>
-                </div>
-
-            </form>
-        </div>
-    </header>
-
-
+                </datalist>
+            </div>
+        </form>
+    </div>
+</header>
 
 <main>
-
-    <div class="expocrato" id="expocrato">
+    <div class="expocrato" id="expocrato_ativo">
         <section class="evento-destaque">
             <div class="imagem">
                 <img src="style/img/Expocrato_descricao.png" alt="Expocrato 2025">
             </div>
-
             <div class="informacoes">
                 <div class="informacoes_info">
                     <h2>Expocrato 2025</h2>
-                    <p><strong>Data:</strong> 30/03/2025</p>
+                    <p><strong>Data:</strong> 11 a 20/07/2025</p>
                     <p><strong>Início:</strong> 18:00</p>
-                    <p><strong>Valor:</strong> 20,00$</p>
+                    <p><strong>Valor:</strong> R$250,00</p>
                 </div>
                 <div class="informacoes_botao" onclick="pagamento()">
                     <a href="#" class="botao">Clique Para Participar</a>
                 </div>
             </div>
         </section>
-
         <section class="descricao">
             <hr>
             <p>
-                A espera acabou! O maior evento de música e cultura do interior do Ceará já tem data marcada para agitar o Cariri. 
-                A Expocrato 2025 acontece de 11 a 20 de julho, no Parque de Exposições Pedro Felício Cavalcante, no Crato. 
-                Prepare-se para viver 9 noites inesquecíveis (exceto no dia 14) com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
+                A Expocrato 2025 acontece de 11 a 20 de julho no Crato-CE. Serão 9 noites inesquecíveis (exceto no dia 14) com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
             </p>
         </section>
     </div>
 
-
-
-    <div class="paudabandeira" id="paudabandeira">
+    <div class="paudabandeira" id="paudabandeira_ativo">
         <section class="evento-destaque">
             <div class="imagem">
-                <img src="style/img/Expocrato_descricao.png" alt="Expocrato 2025">
+                <img src="style/img/Paudabandeira_banner.png" alt="Pau da Bandeira">
             </div>
-
             <div class="informacoes">
                 <div class="informacoes_info">
-                    <h2>Expocrato 2025</h2>
-                    <p><strong>Data:</strong> 30/03/2025</p>
-                    <p><strong>Início:</strong> 18:00</p>
-                    <p><strong>Valor:</strong> 20,00$</p>
+                    <h2>Pau da Bandeira 2025</h2>
+                    <p><strong>Data:</strong> 02/06/2025</p>
+                    <p><strong>Início:</strong> 08:00</p>
+                    <p><strong>Valor:</strong> Gratuito</p>
                 </div>
-                <div class="informacoes_botao" onclick="pagamento()">
+                <div class="informacoes_botao" onclick="concluido()">
                     <a href="#" class="botao">Clique Para Participar</a>
                 </div>
             </div>
         </section>
-
         <section class="descricao">
             <hr>
             <p>
-                A espera acabou! O maior evento de música e cultura do interior do Ceará já tem data marcada para agitar o Cariri. 
-                A Expocrato 2025 acontece de 11 a 20 de julho, no Parque de Exposições Pedro Felício Cavalcante, no Crato. 
-                Prepare-se para viver 9 noites inesquecíveis (exceto no dia 14) com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
+                A Festa do Pau da Bandeira em Barbalha celebra Santo Antônio com o tradicional corte e carregamento do tronco, música, cultura e devoção. Um dos maiores eventos religiosos do Cariri.
+            </p>
+        </section>
+    </div>  
+
+    <div class="juaforro" id="juaforro_ativo">
+        <section class="evento-destaque">
+            <div class="imagem">
+                <img src="style/img/Juaforro.jpg" alt="Juaforró">
+            </div>
+            <div class="informacoes">
+                <div class="informacoes_info">
+                    <h2>Juaforró 2025</h2>
+                    <p><strong>Data:</strong> 19 a 23/06/2025</p>
+                    <p><strong>Início:</strong> 19:00</p>
+                    <p><strong>Valor:</strong> Gratuito</p>
+                </div>
+                <div class="informacoes_botao" onclick="concluido()">
+                    <a href="#" class="botao">Clique Para Participar</a>
+                </div>
+            </div>
+        </section>
+        <section class="descricao">
+            <hr>
+            <p>
+                O Juaforró é o maior São João do Cariri! Com shows, quadrilhas juninas e comidas típicas, ele acontece no Parque de Eventos Padre Cícero e atrai milhares de pessoas.
             </p>
         </section>
     </div>
 
-
-
-    <div class="juaforro" id="juaforro">
+    <div class="romaria" id="romaria_ativo">
         <section class="evento-destaque">
             <div class="imagem">
-                <img src="style/img/Expocrato_descricao.png" alt="Expocrato 2025">
+                <img src="style/img/Romaria_descricao.jpeg" alt="Romaria de Juazeiro">
             </div>
-
             <div class="informacoes">
                 <div class="informacoes_info">
-                    <h2>Expocrato 2025</h2>
-                    <p><strong>Data:</strong> 30/03/2025</p>
-                    <p><strong>Início:</strong> 18:00</p>
-                    <p><strong>Valor:</strong> 20,00$</p>
+                    <h2>Romaria de Juazeiro</h2>
+                    <p><strong>Data:</strong> 20/07/2025</p>
+                    <p><strong>Início:</strong> 06:00</p>
+                    <p><strong>Valor:</strong> Gratuito</p>
                 </div>
-                <div class="informacoes_botao" onclick="pagamento()">
+                <div class="informacoes_botao" onclick="concluido()">
                     <a href="#" class="botao">Clique Para Participar</a>
                 </div>
             </div>
         </section>
-
         <section class="descricao">
             <hr>
             <p>
-                A espera acabou! O maior evento de música e cultura do interior do Ceará já tem data marcada para agitar o Cariri. 
-                A Expocrato 2025 acontece de 11 a 20 de julho, no Parque de Exposições Pedro Felício Cavalcante, no Crato. 
-                Prepare-se para viver 9 noites inesquecíveis (exceto no dia 14) com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
-            </p>
-        </section>
-    </div>    
-
-
-
-    <div class="romaria" id="romaria">
-        <section class="evento-destaque">
-            <div class="imagem">
-                <img src="style/img/Expocrato_descricao.png" alt="Expocrato 2025">
-            </div>
-
-            <div class="informacoes">
-                <div class="informacoes_info">
-                    <h2>Expocrato 2025</h2>
-                    <p><strong>Data:</strong> 30/03/2025</p>
-                    <p><strong>Início:</strong> 18:00</p>
-                    <p><strong>Valor:</strong> 20,00$</p>
-                </div>
-                <div class="informacoes_botao" onclick="pagamento()">
-                    <a href="#" class="botao">Clique Para Participar</a>
-                </div>
-            </div>
-        </section>
-
-        <section class="descricao">
-            <hr>
-            <p>
-                A espera acabou! O maior evento de música e cultura do interior do Ceará já tem data marcada para agitar o Cariri. 
-                A Expocrato 2025 acontece de 11 a 20 de julho, no Parque de Exposições Pedro Felício Cavalcante, no Crato. 
-                Prepare-se para viver 9 noites inesquecíveis (exceto no dia 14) com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
+                A Romaria é um dos maiores eventos religiosos do Brasil, reunindo milhares de fiéis em Juazeiro do Norte para homenagear Padre Cícero com fé, emoção e tradição.
             </p>
         </section>
     </div>
-
-
-
-
-
-
 
     <div id="pagamento" class="pagamento">
         <div class="pagamento_content">
