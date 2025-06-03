@@ -30,11 +30,7 @@
                 </ol>
 
                 <ol>
-<<<<<<< HEAD:index.html
-                    <a href="cadastro_eventos.html">Cadastrar um evento</a>
-=======
                     <a href="cadastro_eventos.php">Cadastrar um evento</a>
->>>>>>> a28549b7ccec1b11a60796264395b0b0282e6959:index.php
                 </ol>
 
                 <ol>

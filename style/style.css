@@ -1049,8 +1049,7 @@ header input:focus {
 
 /*Estilo CRIAÇÃO DE EVENTOS*/
 
-  .cadastro-evento {
-<<<<<<< HEAD
+.cadastro-evento {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1063,9 +1062,8 @@ header input:focus {
     gap: 20px;
 }
 
-  .background-cadastro-evento{
+.background-cadastro-evento{
     display: flex;
-=======
     margin-top: 100px;
     margin-bottom: 50px;
     display: flex;
@@ -1104,25 +1102,20 @@ header input:focus {
 .background-cadastro-evento{
     display: flex;
     flex-direction: row;
->>>>>>> a28549b7ccec1b11a60796264395b0b0282e6959
     justify-content: center;
     align-items: center;
 }
 
 .cadastro-evento-esquerda{
-<<<<<<< HEAD
     gap: 100px;
-=======
     display: flex;
     flex-direction: column;
     gap: 50px;
->>>>>>> a28549b7ccec1b11a60796264395b0b0282e6959
 }
 
 .evento-esquerda{
     display: flex;
     flex-direction: column;
-<<<<<<< HEAD
     gap: 100px;
 }
 
@@ -1135,9 +1128,6 @@ header input:focus {
     height: 30px;
 }
 
-=======
-    gap: 80px;
-}
 
 .cadastro-evento h1{
     margin-bottom: 50px;
@@ -1158,7 +1148,6 @@ header input:focus {
     display: none;
 }
 
->>>>>>> a28549b7ccec1b11a60796264395b0b0282e6959
 
 
 
