@@ -67,7 +67,7 @@ $eventos = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     <div class="validação_imagem">
                         <h2><?= htmlspecialchars($evento['nome']) ?></h2>
                         <picture>
-                            <img src="<?= htmlspecialchars($evento['imagem']) ?>" alt="Imagem do evento">
+                            <img src="<?= htmlspecialchars($evento['imagem']) ?>" alt="Imagem do evento" width="250" height="250">
                         </picture>
                     </div>
 

@@ -1,7 +1,16 @@
 <?php
 session_start();
+include('php/conexao.php');
+
 $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
+
+// Buscar eventos aprovados
+$sql = "SELECT id_evento, nome, data_evento, descricao, imagem FROM cadastro_evento WHERE status_evento = 'APROVADO'";
+$stmt = $conexao->prepare($sql);
+$stmt->execute();
+$eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -104,36 +113,29 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
     </div>
   </section>
 
-  <!-- Eventos em destaque -->
+  <!-- Eventos Aprovados -->
   <section class="eventos-maiores">
+    <?php if (count($eventos_aprovados) > 0): ?>
+      <?php foreach ($eventos_aprovados as $evento): ?>
+        <article class="background-eventos">
+          <h2><?= htmlspecialchars($evento['nome']) ?> - <?= date('d/m', strtotime($evento['data_evento'])) ?></h2>
 
-    <article class="background-eventos">
-      <h2>Expocrato 01/04</h2>
-      <picture><img src="style/img/Expocrato_miniatura.jpeg" alt="Imagem do evento Expocrato" /></picture>
-      <p>
-        A Expocrato 2025 acontece de 11 a 20 de julho no Parque de Exposições Pedro Felício Cavalcante, no Crato. Prepare-se para viver 9 noites inesquecíveis com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
-      </p>
-      <a href="Descricao.php?evento=expocrato_ativo"><button>Ver Detalhes</button></a>
-    </article>
+          <?php if (!empty($evento['imagem'])): ?>
+            <picture>
+              <img src="<?= htmlspecialchars($evento['imagem']) ?>" alt="Imagem do evento <?= htmlspecialchars($evento['nome']) ?>">
+            </picture>
+          <?php endif; ?>
 
-    <article class="background-eventos">
-      <h2>Pau da Bandeira 02/04</h2>
-      <picture><img src="style/img/Paudabandeira_miniatura.jpeg" alt="Imagem do evento Pau da Bandeira" /></picture>
-      <p>
-        Celebração tradicional em homenagem a Santo Antônio em Barbalha, com hasteamento do pau da bandeira, cultura popular e atrações musicais. Um dos eventos mais fortes do Cariri cearense.
-      </p>
-      <a href="Descricao.php?evento=paudabandeira_ativo"><button>Ver Detalhes</button></a>
-    </article>
+          <p><?= nl2br(htmlspecialchars($evento['descricao'])) ?></p>
 
-    <article class="background-eventos">
-      <h2>Juaforró 03/04</h2>
-      <picture><img src="style/img/Juaforro_miniatura.jpeg" alt="Imagem do evento Juaforró" /></picture>
-      <p>
-        O Juaforró 2024 ocorre de 19 a 23 de junho em Juazeiro do Norte. Com mais de 20 atrações, quadrilhas e comidas típicas, é um dos maiores eventos juninos da região.
-      </p>
-      <a href="Descricao.php?evento=juaforro_ativo"><button>Ver Detalhes</button></a>
-    </article>
-
+          <a href="Descricao.php?id_evento=<?= $evento['id_evento'] ?>">
+            <button>Ver Detalhes</button>
+          </a>
+        </article>
+      <?php endforeach; ?>
+    <?php else: ?>
+      <p style="text-align: center;">Nenhum evento aprovado no momento.</p>
+    <?php endif; ?>
   </section>
 
 </main>

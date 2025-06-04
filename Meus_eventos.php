@@ -1,84 +1,68 @@
+<?php
+session_start();
+include('php/conexao.php');
+
+// Verifica se o usuário está logado
+if (!isset($_SESSION['usuario_logado'])) {
+    header("Location: login.php");
+    exit;
+}
+
+$cpf_usuario = $_SESSION['usuario_logado'];
+
+// Busca os eventos em que o usuário está inscrito
+$sql = "
+    SELECT e.nome, e.data_evento, e.descricao, e.imagem, e.tipo, e.valor
+    FROM inscricoes i
+    JOIN cadastro_evento e ON i.id_evento = e.id_evento
+    WHERE i.cpf_usuario = :cpf AND e.status_evento = 'APROVADO'
+";
+$stmt = $conexao->prepare($sql);
+$stmt->bindParam(':cpf', $cpf_usuario);
+$stmt->execute();
+$eventos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Eventos - Juaforró e Expocrato</title>
+  <title>Meus Eventos</title>
   <link rel="stylesheet" href="style/style.css">
 </head>
 <body class="principal">
 
-    <header class="header">
+  <header class="header">
+    <a href="index.php"><img class="logo_img" src="style/img/Logo.png" alt="Logo do site"></a>
+  </header>
 
-    <picture class="logo">
-        <a href="index.php">
-            <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
-        </a>
-    </picture>
-
-        </div>
-
-        <div>
-            <form action="#" class="search">
-
-                <div class="search_header">            
-                    <div>
-                        <input name="pesquisa" type="list" placeholder="Buscar Eventos">
-                    </div>
-
-
-                    <div>
-                        <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
-                        <datalist id="cidades">
-                        <option value="Juazeiro do Norte">
-                        </datalist>
-                    </div>
-                </div>
-
-                <div>
-                    <ul>
-                        <ol>
-                            <picture class="login_icone" >
-                                <a href="login.php">
-                                    <img class="login_icone_img" src="style/img/user-interface.png" alt="Imagem de login" >
-                                </a>
-                            </picture>
-                        </ol>
-                    </ul>
-                </div>
-
-            </form>
-        </div>
-
-        <div class="menu_nav" id="menu_nav">
-            <div class="menu_nav_content">
-                <a href="validacao.php">Validação de eventos</a>
-                <a href="Meus_eventos.php">Meus eventos</a>
-                <a href="#">Cadastrar eventos</a>
-            </div>
-        </div>
-    </header>
-
-<main class="container-eventos">
-
+  <main class="container-eventos">
     <h2 class="titulo">Meus Eventos</h2>
 
-    <h2 class="titulo-evento">Juaforró</h2>
-    <section class="evento">
-      <img src="style/img/Juaforro_miniatura.jpeg" alt="Juaforró">
-      <div class="descricao-evento">
-        <p>O Juaforró 2024, tradicional festa junina de Juazeiro do Norte, acontece de 19 a 23 de junho no Parque de Eventos Padre Cícero e é gratuito. A programação inclui mais de 20 atrações musicais como Fagner, Taty Girl, Solange Almeida, Mano Walter, Banda Líbanos e muitos outros. Além dos shows, o evento conta com apresentações de 28 quadrilhas juninas, barracas com comidas típicas e atividades culturais.</p>
-      </div>
-    </section>
-  
-    <h2 class="titulo-evento">Expocrato 2025</h2>
-    <section class="evento">
-      <img src="style/img/Expocrato_miniatura.jpeg" alt="Expocrato 2025">
-      <div class="descricao-evento">
-        <p>A espera acabou! O maior evento de música e cultura do interior do Ceará já tem data marcada para agitar o Cariri. A Expocrato 2025 acontece de 11 a 20 de julho, no Parque de Exposições Pedro Felício Cavalcante, no Crato. Prepare-se para viver 9 noites inesquecíveis (exceto no dia 14) com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.</p>
-      </div>
-    </section>
-  
+    <?php if (count($eventos) === 0): ?>
+      <p style="text-align:center;">Você ainda não está inscrito em nenhum evento.</p>
+    <?php else: ?>
+      <?php foreach ($eventos as $evento): ?>
+        <section class="evento background-eventos">
+          <h2><?= htmlspecialchars($evento['nome']) ?> - <?= date('d/m/Y', strtotime($evento['data_evento'])) ?></h2>
+
+          <?php if (!empty($evento['imagem'])): ?>
+            <picture>
+              <img src="<?= htmlspecialchars($evento['imagem']) ?>" alt="Imagem do evento" style="max-width: 300px;">
+            </picture>
+          <?php endif; ?>
+
+          <p><strong>Tipo:</strong> <?= htmlspecialchars($evento['tipo']) ?></p>
+          <p><strong>Valor:</strong> <?= $evento['tipo'] === 'Gratuito' ? 'Gratuito' : 'R$ ' . number_format($evento['valor'], 2, ',', '.') ?></p>
+
+          <p><?= nl2br(htmlspecialchars($evento['descricao'])) ?></p>
+        </section>
+      <?php endforeach; ?>
+    <?php endif; ?>
+
+    <div style="text-align:center; margin-top: 20px;">
+      <a href="index.php"><button>Voltar</button></a>
+    </div>
   </main>
 
 </body>
