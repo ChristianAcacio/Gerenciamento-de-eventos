@@ -122,7 +122,7 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
           <?php if (!empty($evento['imagem'])): ?>
             <picture>
-              <img src="<?= htmlspecialchars($evento['imagem']) ?>" alt="Imagem do evento <?= htmlspecialchars($evento['nome']) ?>">
+              <img src="<?= htmlspecialchars($evento['imagem']) ?>" alt="Imagem do evento <?= htmlspecialchars($evento['nome']) ?>" width="250" height="250">
             </picture>
           <?php endif; ?>
 
