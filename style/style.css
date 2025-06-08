@@ -5,6 +5,11 @@
     font-family: Arial, sans-serif;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 
 
 
@@ -27,8 +32,8 @@ body.login {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
     padding: 50px;
-    border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
     text-align: center;
     width: 400px;
 }
@@ -78,8 +83,13 @@ body.login {
     color: #333;
 }
 
-
 .btn_link{
+    display: block;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.btn_link button {
     width: 100%;
     padding: 10px;
     border: none;
@@ -87,21 +97,16 @@ body.login {
     font-weight: bold;
     cursor: pointer;
     transition: 0.3s ease;
-    margin-top: 10px;
     margin-bottom: 10px;
-    background-color: white;
-    color: #2e2b88;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
+.btn_link:first-of-type button{
+    background-color: white;
+    color: #2e2b88;
+}
 
-
-.btn_link:hover {
+.btn_link:first-of-type button:hover {
     background-color: #e2e2e2;
-    transform: scale(1.05);
 }
 
 .button2 {
@@ -155,7 +160,8 @@ body.cadastro {
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
     text-align: center;
-    width: 1200px;
+    width: 100%;
+    max-width: 1200px;
 }
 
 .organizer{
@@ -197,7 +203,6 @@ body.cadastro {
 
 .cadastro_buttons{
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
 }
 
@@ -1050,7 +1055,21 @@ header input:focus {
 
 /*Estilo CRIAÇÃO DE EVENTOS*/
 
-  .cadastro-evento {
+.cadastro-evento {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
+    height: 80%;
+    background-color: #454545;
+    color: white;
+    border-radius: 15px;
+    padding: 50px;
+    gap: 20px;
+}
+
+.background-cadastro-evento{
+    display: flex;
     margin-top: 100px;
     margin-bottom: 50px;
     display: flex;
@@ -1067,7 +1086,10 @@ header input:focus {
 }
 
 .imagem_label{
-    text-decoration: none;
+    width: 150px;
+    height: 150px;
+    background-color: #6c63ff;
+    border: 2px black;
 }
 
 .textarea{
@@ -1079,13 +1101,8 @@ header input:focus {
     height: 150px;
 }
 
-.fildset{
+.fieldset{
     border: none;
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    gap: 10px;
 }
 
 .background-cadastro-evento{
@@ -1096,6 +1113,7 @@ header input:focus {
 }
 
 .cadastro-evento-esquerda{
+    gap: 100px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -1104,8 +1122,18 @@ header input:focus {
 .evento-esquerda{
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 100px;
 }
+
+.cadastro-evento-esquerda h1{
+    margin-bottom: 50px;
+}
+
+.cadastro-evento-esquerda input{
+    background-color: #a5a4a4;
+    height: 30px;
+}
+
 
 .cadastro-evento h1{
     margin-bottom: 50px;
@@ -1146,7 +1174,6 @@ header input:focus {
 /*RESPONSIVIDADE*/
 
 
-/* Tablets */
 @media (max-width: 992px) {
     .background-cadastro {
         padding: 30px;
@@ -1173,16 +1200,12 @@ header input:focus {
     }
 }
 
-/* Celulares */
 @media (max-width: 768px) {
-    .organizer {
-        flex-direction: column;
-        gap: 20px;
-    }
-
+    .organizer,
     .cadastro_buttons {
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
+        align-items: center;
     }
 
     .btn_link button {
@@ -1193,5 +1216,60 @@ header input:focus {
         gap: 20px;
         flex-direction: column;
         align-items: flex-start;
+    }
+
+    .evento {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .evento img {
+        width: 90%;
+        height: auto;
+    }
+
+    .descricao-evento {
+        width: 90%;
+    }
+
+    .datas-background {
+        flex-direction: column;
+        width: 95%;
+        gap: 10px;
+    }
+
+    .background-eventos {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+
+    .cadastro-evento {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .cadastro-evento-esquerda,
+    .cadastro-evento-direita {
+        width: 100%;
+    }
+
+    .background_validação {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .slider {
+        height: auto;
+    }
+
+    .slides-box {
+        max-width: 100vw;
+    }
+
+    .slide-box img {
+        width: 100%;
+        height: auto;
+        position: static;
+        transform: none;
     }
 }
