@@ -97,8 +97,10 @@
 
                     <fieldset class="fildset">
                         <span>Entrada:</span>
-                        <label><input type="radio" name="entrada" value="Gratuito" checked> Gratuito</label>
-                        <label><input type="radio" name="entrada" value="Pago"> Pago</label>
+                        <div class="fildset_op">
+                            <label><input type="radio" name="entrada" value="Gratuito" checked> Gratuito</label>
+                            <label><input type="radio" name="entrada" value="Pago"> Pago</label>
+                        </div>
                     </fieldset>
 
                     <div>
@@ -118,11 +120,9 @@
                         <textarea id="descricao" name="descricao" placeholder="Detalhe todas as informações do evento" required class="textarea_label"></textarea>
                     </div>
 
-                    <button class="btn_link" type="submit">Cadastrar</button>
+                    <button class="btn_link_cadastrar" type="submit">Cadastrar</button>
 
                 </div>
-
-                <input type="submit" value="Enviar">
                 
             </form>
         </section>

@@ -24,36 +24,75 @@ $eventos = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body class="principal">
 
-<header class="header">
-    <picture class="logo">
-        <a href="index.php">
-            <img class="logo_img" src="style/img/Logo.png" alt="Logo do site">
-        </a>
-    </picture>
+    <header class="header">
 
-    <nav>
-        <ul class="nav_pc">
-            <li><a href="Meus_eventos.php">Meus eventos</a></li>
-            <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
-            <li><a href="validacao.php">Validação de eventos</a></li>
-        </ul>
-    </nav>
-
-    <form action="#" class="search">
-        <div class="search_header">
-            <input name="pesquisa" type="search" placeholder="Buscar Eventos">
-            <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
-            <datalist id="cidades">
-                <option value="Juazeiro do Norte">
-            </datalist>
-        </div>
-        <div>
-            <a href="login.php" class="login_icone">
-                <img class="login_icone_img" src="style/img/user-interface.png" alt="Login">
+        <picture class="logo">
+            <a href="index.php">
+                <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
             </a>
+        </picture>
+
+        <div>
+
+            <ul class="nav_pc">
+
+
+                <ol>
+                    <a href="Meus_eventos.php">Meus eventos</a>
+                </ol>
+
+                <ol>
+                    <a href="cadastro_eventos.php">Cadastrar um evento</a>
+                </ol>
+
+                <ol>
+                    <a href="validacao.php">Validação de eventos</a>
+                </ol>
+            </ul>
+
         </div>
-    </form>
-</header>
+
+        <div>
+            <form action="#" class="search">
+
+                <div class="search_header">            
+                    <div>
+                        <input name="pesquisa" type="list" placeholder="Buscar Eventos">
+                    </div>
+
+
+                    <div>
+                        <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
+                        <datalist id="cidades">
+                        <option value="Juazeiro do Norte">
+                        </datalist>
+                    </div>
+                </div>
+
+                <div>
+                    <ul>
+                        <ol>
+                            <picture class="login_icone" >
+                                <a href="login.php">
+                                    <img class="login_icone_img" src="style/img/user-interface.png" alt="Imagem de login" >
+                                </a>
+                            </picture>
+                        </ol>
+                    </ul>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="menu_nav" id="menu_nav">
+            <div class="menu_nav_content">
+                <a href="validacao.php">Validação de eventos</a>
+                <a href="Meus_eventos.php">Meus eventos</a>
+                <a href="#">Cadastrar eventos</a>
+            </div>
+        </div>
+    </header>
+
 
 <main>
     <section class="validação_titulo">

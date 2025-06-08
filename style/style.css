@@ -15,9 +15,9 @@ html, body {
 
 /* ESTILIZAÇÃO PARA A PÁGINA DE LOGIN E RECUPERAR SENHA*/
 
-body.login, body.recuperar-senha {
+body.login, body.recuperar-senha, body.cadastro{
     height: 100vh;
-    background: linear-gradient(to bottom, #9f99e6, #2e2b88);
+    background: rgb(208, 225, 225);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -29,7 +29,7 @@ body.login, body.recuperar-senha {
 }
 
 .background-login, .background-recuperar-senha {
-    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(to bottom, #9f99e6, #2e2b88);
     backdrop-filter: blur(15px);
     padding: 50px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
@@ -98,6 +98,16 @@ body.login, body.recuperar-senha {
     cursor: pointer;
     transition: 0.3s ease;
     margin-bottom: 10px;
+}
+
+.btn_link_cadastrar{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
 }
 
 .btn_link:first-of-type button{
@@ -328,12 +338,13 @@ header input:focus {
     font-size: 20px;
 }
 
-.nav_pc ol{
+.nav_pc li{
     text-decoration: none;
+    list-style: none;
     transition: 0.5s ease;
 }
 
-.nav_pc ol:hover{
+.nav_pc li:hover{
     transform: scale(1.05);
     cursor: pointer;
 }
@@ -345,7 +356,7 @@ header input:focus {
     justify-content: center;
     align-items: center;
     gap: 30px;
-    margin-top: 20px;
+    margin-top: 12px;
 
 }
 
@@ -502,6 +513,10 @@ header input:focus {
     color: white;
     font-size: 14px;
     width: 400px;
+    flex: 1 1 calc(33.33% - 40px);
+    margin: 20px;
+    max-width: calc(33.33% - 40px);
+    box-sizing: border-box;
 }
 
 .background-eventos img{
@@ -515,10 +530,10 @@ header input:focus {
   }
 
 .eventos-maiores{
-    display: flex;
-    justify-content: space-evenly;
-    padding-bottom: 50px;
-    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-bottom: 50px;
 }
 
 .conteudo{
@@ -651,10 +666,26 @@ header input:focus {
 }
 
 .aprovar{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
     color: rgb(61, 255, 61);
 }
 
 .rejeitar{
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-bottom: 10px;
     color: rgb(255, 6, 6);
 }
 
@@ -996,11 +1027,11 @@ header input:focus {
 }
 
   .container-eventos {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 70px;
-    padding: 160px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
   }
   
  
@@ -1057,33 +1088,19 @@ header input:focus {
 
 .cadastro-evento {
     display: flex;
+    margin-top: 100px;
+    margin-bottom: 50px;
     flex-direction: row;
     justify-content: space-between;
     width: 80%;
     height: 80%;
-    background-color: #454545;
-    color: white;
-    border-radius: 15px;
-    padding: 50px;
-    gap: 20px;
-}
-
-.background-cadastro-evento{
-    display: flex;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    height: 100%;
     background-color: #6c63ff;
     color: white;
-    font-size: 18px;
     border-radius: 15px;
     padding: 50px;
     gap: 100px;
 }
+
 
 .imagem_label{
     width: 150px;
@@ -1101,9 +1118,12 @@ header input:focus {
     height: 150px;
 }
 
-.fieldset{
+.fildset{
     border: none;
+    display: flex;
+    flex-direction: column;
 }
+
 
 .background-cadastro-evento{
     display: flex;
@@ -1130,7 +1150,7 @@ header input:focus {
 }
 
 .cadastro-evento-esquerda input{
-    background-color: #a5a4a4;
+    background-color: white;
     height: 30px;
 }
 
