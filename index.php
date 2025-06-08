@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INDEX</title>
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <script async src="scrypt/code.js"></script>
 </head>
 <body class="principal">
@@ -12,7 +12,7 @@
     <header class="header">
 
         <picture class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
             </a>
         </picture>
@@ -21,20 +21,17 @@
 
             <ul class="nav_pc">
 
+
                 <ol>
-                    <a href="login.php">Login</a>
+                    <a href="Meus_eventos.php">Meus eventos</a>
                 </ol>
 
                 <ol>
-                    <a href="Meus_eventos.html">Meus eventos</a>
+                    <a href="cadastro_eventos.php">Cadastrar um evento</a>
                 </ol>
 
                 <ol>
-                    <a href="cadastro_eventos.html">Cadastrar um evento</a>
-                </ol>
-
-                <ol>
-                    <a href="validacao.html">Validação de evetos</a>
+                    <a href="validacao.php">Validação de eventos</a>
                 </ol>
             </ul>
 
@@ -43,15 +40,30 @@
         <div>
             <form action="#" class="search">
 
-                <div>
-                    <input name="pesquisa" type="list" placeholder="Buscar Eventos">
+                <div class="search_header">            
+                    <div>
+                        <input name="pesquisa" type="list" placeholder="Buscar Eventos">
+                    </div>
+
+
+                    <div>
+                        <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
+                        <datalist id="cidades">
+                        <option value="Juazeiro do Norte">
+                        </datalist>
+                    </div>
                 </div>
 
                 <div>
-                    <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
-                    <datalist id="cidades">
-                      <option value="Juazeiro do Norte">
-                    </datalist>
+                    <ul>
+                        <ol>
+                            <picture class="login_icone" >
+                                <a href="login.php">
+                                    <img class="login_icone_img" src="style/img/user-interface.png" alt="Imagem de login" >
+                                </a>
+                            </picture>
+                        </ol>
+                    </ul>
                 </div>
 
             </form>
@@ -59,55 +71,54 @@
 
         <div class="menu_nav" id="menu_nav">
             <div class="menu_nav_content">
-                <a href="validacao.html">Validação de eventos</a>
-                <a href="Meus_eventos.html">Meus eventos</a>
+                <a href="validacao.php">Validação de eventos</a>
+                <a href="Meus_eventos.php">Meus eventos</a>
                 <a href="#">Cadastrar eventos</a>
             </div>
         </div>
     </header>
 
-    
-
-
-
-
     <main>
-
-        <div class="slider">
-            <div class="slider-content">
-                
-                <input type="radio" name="btn-radio" id="radio1" checked>
-                <input type="radio" name="btn-radio" id="radio2">
-                <input type="radio" name="btn-radio" id="radio3">
-                <input type="radio" name="btn-radio" id="radio4">
-        
-                <div class="slides-box">
-                    <div class="slide-box">
-                        <img src="style/img/Expocrato_Banner.jpg" alt="Expocrato">
-                    </div>
-                    <div class="slide-box">
-                        <img src="style/img/Design sem nome.png" alt="Pau da Bandeira">
-                    </div>
-                    <div class="slide-box">
-                        <img src="style/img/Juaforro.jpg" alt="Jua Forró">
-                    </div>
-                    <div class="slide-box">
-                        <img src="style/img/Romaria.webp" alt="Romaria de juazerio">
+        <div class="slider_back">
+            <div class="slider">
+                <div class="slider-content">
+                    
+                    <input type="radio" name="btn-radio" id="radio1" checked>
+                    <input type="radio" name="btn-radio" id="radio2">
+                    <input type="radio" name="btn-radio" id="radio3">
+                    <input type="radio" name="btn-radio" id="radio4">
+            
+                    <div class="slides-box">
+                        <div class="slide-box">
+                            <img src="style/img/Expocrato_Banner.jpg" alt="Expocrato">
+                        </div>
+                        <div class="slide-box">
+                            <img src="style/img/Design sem nome.png" alt="Pau da Bandeira">
+                        </div>
+                        <div class="slide-box">
+                            <img src="style/img/Juaforro.jpg" alt="Jua Forró">
+                        </div>
+                        <div class="slide-box">
+                            <img src="style/img/Romaria.webp" alt="Romaria de juazerio">
+                        </div>
                     </div>
                 </div>
             </div>
+
+            <div class="nav-manual" id="nav-slider">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
         </div>
 
-        <div class="nav-manual" id="nav-slider">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
-        </div>
+
+
 
         <div class="organizar-datas">
             <div class="datas-background">
-                <div class="datas">
+                <div class="datas" onclick="mostrar_evento('')">
                     <span>01/04</span>
                     <span>Terça-feira</span>
                 </div>
@@ -149,7 +160,7 @@
                         com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
                     </p>
 
-                    <a href="Descricao.html?evento=expocrato_ativo">
+                    <a href="Descricao.php?evento=expocrato_ativo">
                         <button>Ver Detalhes</button>
                     </a>
             </div>
@@ -172,7 +183,7 @@
                         do Cariri cearense.
                     </p>
 
-                    <a href="Descricao.html?evento=paudabandeira_ativo">
+                    <a href="Descricao.php?evento=paudabandeira_ativo">
                         <button>Ver Detalhes</button>
                     </a>
         
@@ -190,7 +201,7 @@
                         O Juaforró 2024, tradicional festa junina de Juazeiro do Norte, acontece de 19 a 23 de junho no Parque de Eventos Padre Cícero e é gratuito. A programação inclui mais de 20 atrações musicais como Fagner, Taty Girl, Solange Almeida, Mano Walter, Banda Líbanos e muitos outros. Além dos shows, o evento conta com apresentações de 28 quadrilhas juninas, barracas com comidas típicas e atividades culturais.
                     </p>
 
-                    <a href="Descricao.html?evento=juaforro_ativo">
+                    <a href="Descricao.php?evento=juaforro_ativo">
                         <button>Ver Detalhes</button>
                     </a>
             </div>

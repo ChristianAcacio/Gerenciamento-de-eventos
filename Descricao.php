@@ -31,29 +31,74 @@
 
 <body class="principal">
 
-<header>
-    <div>
+    <header class="header">
+
         <picture class="logo">
-            <a href="index.html">
+            <a href="index.php">
                 <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
             </a>
         </picture>
-    </div>
 
-    <div>
-        <form action="#" class="search">
-            <div>
-                <input name="pesquisa" type="list" placeholder="Buscar Eventos">
+        <div>
+
+            <ul class="nav_pc">
+
+
+                <ol>
+                    <a href="Meus_eventos.php">Meus eventos</a>
+                </ol>
+
+                <ol>
+                    <a href="cadastro_eventos.php">Cadastrar um evento</a>
+                </ol>
+
+                <ol>
+                    <a href="validacao.php">Validação de eventos</a>
+                </ol>
+            </ul>
+
+        </div>
+
+        <div>
+            <form action="#" class="search">
+
+                <div class="search_header">            
+                    <div>
+                        <input name="pesquisa" type="list" placeholder="Buscar Eventos">
+                    </div>
+
+
+                    <div>
+                        <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
+                        <datalist id="cidades">
+                        <option value="Juazeiro do Norte">
+                        </datalist>
+                    </div>
+                </div>
+
+                <div>
+                    <ul>
+                        <ol>
+                            <picture class="login_icone" >
+                                <a href="login.php">
+                                    <img class="login_icone_img" src="style/img/user-interface.png" alt="Imagem de login" >
+                                </a>
+                            </picture>
+                        </ol>
+                    </ul>
+                </div>
+
+            </form>
+        </div>
+
+        <div class="menu_nav" id="menu_nav">
+            <div class="menu_nav_content">
+                <a href="validacao.php">Validação de eventos</a>
+                <a href="Meus_eventos.php">Meus eventos</a>
+                <a href="#">Cadastrar eventos</a>
             </div>
-            <div>
-                <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
-                <datalist id="cidades">
-                    <option value="Juazeiro do Norte">
-                </datalist>
-            </div>
-        </form>
-    </div>
-</header>
+        </div>
+    </header>
 
 <main>
     <div class="expocrato" id="expocrato_ativo">
@@ -74,7 +119,6 @@
             </div>
         </section>
         <section class="descricao">
-            <hr>
             <p>
                 A Expocrato 2025 acontece de 11 a 20 de julho no Crato-CE. Serão 9 noites inesquecíveis (exceto no dia 14) com os maiores artistas do Brasil em um espetáculo de luz, som e emoção.
             </p>
@@ -99,7 +143,6 @@
             </div>
         </section>
         <section class="descricao">
-            <hr>
             <p>
                 A Festa do Pau da Bandeira em Barbalha celebra Santo Antônio com o tradicional corte e carregamento do tronco, música, cultura e devoção. Um dos maiores eventos religiosos do Cariri.
             </p>
@@ -124,7 +167,6 @@
             </div>
         </section>
         <section class="descricao">
-            <hr>
             <p>
                 O Juaforró é o maior São João do Cariri! Com shows, quadrilhas juninas e comidas típicas, ele acontece no Parque de Eventos Padre Cícero e atrai milhares de pessoas.
             </p>
@@ -149,7 +191,6 @@
             </div>
         </section>
         <section class="descricao">
-            <hr>
             <p>
                 A Romaria é um dos maiores eventos religiosos do Brasil, reunindo milhares de fiéis em Juazeiro do Norte para homenagear Padre Cícero com fé, emoção e tradição.
             </p>

@@ -65,3 +65,11 @@ window.onload = function () {
       }
   }
 }
+
+
+// calendario
+
+function mostrar_evento(evento){
+  document.getElementById(evento).style.display = "flex";
+}
+
