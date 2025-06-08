@@ -13,9 +13,9 @@ html, body {
 
 
 
-/* ESTILIZAÇÃO PARA A PÁGINA DE LOGIN */
+/* ESTILIZAÇÃO PARA A PÁGINA DE LOGIN E RECUPERAR SENHA*/
 
-body.login {
+body.login, body.recuperar-senha {
     height: 100vh;
     background: linear-gradient(to bottom, #9f99e6, #2e2b88);
     display: flex;
@@ -28,7 +28,7 @@ body.login {
     height: 50px;
 }
 
-.background-login {
+.background-login, .background-recuperar-senha {
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(15px);
     padding: 50px;
@@ -38,13 +38,13 @@ body.login {
     width: 400px;
 }
 
-.background-login h1 {
+.background-login h1, .background-recuperar-senha h1 {
     margin-bottom: 50px;
     font-size: 28px;
     color: white;
 }
 
-.background-login label {
+.background-login label, .background-recuperar-senha label {
     display: block;
     text-align: left;
     color: white;
@@ -53,7 +53,7 @@ body.login {
     font-size: 14px;
 }
 
-.background-login input {
+.background-login input, .background-recuperar-senha input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
@@ -65,7 +65,7 @@ body.login {
     transition: all 0.3s ease;
 }
 
-.background-login input:focus {
+.background-login input:focus, .background-recuperar-senha:focus {
     background: white;
     box-shadow: 0 0 0 2px #6c63ff;
 }

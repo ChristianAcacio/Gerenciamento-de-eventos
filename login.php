@@ -1,6 +1,6 @@
 <?php session_start(); ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,14 +9,6 @@
     <script async src="scrypt/code.js"></script>
 </head>
 <body class="login">
-
-    <?php
-    if (isset($_SESSION['mensagem'])) {
-        echo "<script>alert('" . addslashes($_SESSION['mensagem']) . "');</script>";
-        unset($_SESSION['mensagem']);
-    }
-    ?>
-    
     <main>
 
         <div class="background-login">
@@ -24,7 +16,7 @@
             <h1>
                 Login
             </h1>
-            <form action="php/validarLogin.php" method="POST" >
+            <form action="php/validar_login.php" method="POST" >
                 <div>
                     <div>
                         <label for="">CPF</label>
@@ -37,28 +29,19 @@
                         <span class="revelar_senha" onclick="Mostrar_senha()">👁️</span>
                     </div>
 
-                    
-                    <a href="index.html" class="btn_link" type="submit">Entrar</a>
-
+                    <div class="cadastro">
+                        <a href="index.php" class="btn_link"><button class="btn_link" type="submit">Entrar</button></a>
+                    </div>
                 </div>
             </form>
                 <div class="cadastro">
                     <a href="Register.php" class="button2"><button class="button2" type="submit">Cadastre-se</button></a>
                 </div>
+                <div class="cadastro">
+                    <a href="php/recuperar_senha.php" class="button2"><button class="button2" type="submit">Esqueci minha senha</button></a>
+                </div>
         </div>
 
     </main>
-
-
-
-
-
-
-
-
-
-
-
-
 </body>
 </html>

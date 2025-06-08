@@ -30,6 +30,12 @@ function enviarEmail($destinatario, $assunto, $mensagem) {
         $mail->Body = $mensagem;
 
         $mail->send();
+        if ($mail->send()) {
+            echo "Email enviado com sucesso!";
+        } else {
+            echo "Erro ao enviar: " . $mail->ErrorInfo;
+        }
+
         return true;
     } catch (Exception $e) {
         echo "Erro ao enviar o e-mail: {$mail->ErrorInfo}";
