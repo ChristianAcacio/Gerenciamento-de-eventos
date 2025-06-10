@@ -29,50 +29,51 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </a>
   </div>
 
-  <!-- Menu principal -->
-  <nav>
-    <ul class="nav_pc">
-      <?php if ($tipo_usuario): ?>
-        <li><a href="php/logout.php">Logout</a></li>
-        <li><a href="Meus_eventos.php">Meus Eventos</a></li>
-        <?php if ($tipo_usuario === 'admin'): ?>
-          <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
-          <li><a href="validacao.php">Validação de eventos</a></li>
-        <?php endif; ?>
-      <?php else: ?>
-        <li><a href="login.php">Login</a></li>
-      <?php endif; ?>
-    </ul>
-  </nav>
+  <div class="header-right">
 
-  <!-- Formulário de busca -->
-  <form action="#" class="search">
-    <div>
-      <input name="pesquisa" type="search" placeholder="Buscar Eventos" />
-    </div>
-    <div>
-      <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione" />
-      <datalist id="cidades">
-        <option value="Juazeiro do Norte">
-      </datalist>
-    </div>
-  </form>
 
-  <!-- Menu lateral (mobile) -->
-  <nav class="menu_nav" id="menu_nav">
-    <div class="menu_nav_content">
-      <?php if ($tipo_usuario): ?>
-        <a href="Meus_eventos.php">Meus Eventos</a>
-        <?php if ($tipo_usuario === 'admin'): ?>
-          <a href="cadastro_eventos.php">Cadastrar Evento</a>
-          <a href="validacao.php">Validação de Eventos</a>
+    <!-- Menu principal -->
+    <nav class="nav-login">
+      <ul class="nav_pc">
+        <?php if ($tipo_usuario): ?>
+          <li><a href="Meus_eventos.php">Meus Eventos</a></li>
+            <?php if ($tipo_usuario === 'admin'): ?>
+              <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
+              <li><a href="validacao.php">Validação de eventos</a></li>
+            <?php endif; ?>
+            <form action="#" class="search">
+              <div>
+                <input name="pesquisa" type="search" placeholder="Buscar Eventos" />
+              </div>
+              <div>
+                <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione" />
+                  <datalist id="cidades">
+                  <option value="Juazeiro do Norte">
+                </datalist>
+              </div>
+            </form>
+          <li><a href="php/logout.php">Logout</a></li>
+        <?php else: ?>
+            <form action="#" class="search">
+              <div>
+                <input name="pesquisa" type="search" placeholder="Buscar Eventos" />
+              </div>
+              <div>
+                <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione" />
+                  <datalist id="cidades">
+                  <option value="Juazeiro do Norte">
+                </datalist>
+              </div>
+            </form>
+          <li>        
+            <a href="login.php" class="login-icon">
+              <img class="login_icone_img" src="style/img/user-interface.png" alt="Ícone de login">
+            </a>
+          </li>
         <?php endif; ?>
-        <a href="php/logout.php">Logout</a>
-      <?php else: ?>
-        <a href="login.php">Login</a>
-      <?php endif; ?>
-    </div>
-  </nav>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <main>
