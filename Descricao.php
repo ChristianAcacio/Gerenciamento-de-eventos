@@ -2,6 +2,8 @@
 session_start();
 include('php/conexao.php');
 
+$tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
+
 // Verifica se o evento foi informado
 if (!isset($_GET['id_evento']) || empty($_GET['id_evento'])) {
     echo "<p>Evento não encontrado.</p>";
@@ -58,38 +60,87 @@ if (!$evento) {
 <body class="principal">
 
   <header class="header">
-    <a href="index.php"><img class="logo_img" src="style/img/Logo.png" alt="Logo do site"></a>
-  </header>
+  <div class="logo">
+    <a href="index.php">
+      <img class="logo_img" src="style/img/Logo.png" alt="Logo do site" />
+    </a>
+  </div>
 
-  <main class="descricao-evento">
-    <section class="evento-detalhado">
-      <h1><?= htmlspecialchars($evento['nome']) ?></h1>
-      <p><strong>Data:</strong> <?= date('d/m/Y', strtotime($evento['data_evento'])) ?></p>
-      <p><strong>Tipo:</strong> <?= htmlspecialchars($evento['tipo']) ?></p>
-      <p><strong>Valor:</strong> <?= $evento['tipo'] === 'Gratuito' ? 'Gratuito' : 'R$ ' . number_format($evento['valor'], 2, ',', '.') ?></p>
+  <div class="header-right">
 
-      <?php if (!empty($evento['imagem'])): ?>
-        <img src="<?= htmlspecialchars($evento['imagem']) ?>" alt="Imagem do evento" style="max-width: 500px;">
-      <?php endif; ?>
 
-      <h2>Descrição</h2>
-      <p><?= nl2br(htmlspecialchars($evento['descricao'])) ?></p>
+    <!-- Menu principal -->
+    <nav class="nav-login">
+      <ul class="nav_pc">
+        <?php if ($tipo_usuario): ?>
+          <li><a href="Meus_eventos.php">Meus Eventos</a></li>
+            <?php if ($tipo_usuario === 'admin'): ?>
+              <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
+              <li><a href="validacao.php">Validação de eventos</a></li>
+            <?php endif; ?>
+            <form action="#" class="search">
+              <div>
+                <input name="pesquisa" type="search" placeholder="Buscar Eventos" />
+              </div>
+              <div>
+                <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione" />
+                  <datalist id="cidades">
+                  <option value="Juazeiro do Norte">
+                </datalist>
+              </div>
+            </form>
+          <li><a href="php/logout.php">Logout</a></li>
+        <?php else: ?>
+            <form action="#" class="search">
+              <div>
+                <input name="pesquisa" type="search" placeholder="Buscar Eventos" />
+              </div>
+              <div>
+                <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione" />
+                  <datalist id="cidades">
+                  <option value="Juazeiro do Norte">
+                </datalist>
+              </div>
+            </form>
+          <li>        
+            <a href="login.php" class="login-icon">
+              <img class="login_icone_img" src="style/img/user-interface.png" alt="Ícone de login">
+            </a>
+          </li>
+        <?php endif; ?>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-      <?php if (isset($mensagem)): ?>
-        <p style="color: green; font-weight: bold;"><?= $mensagem ?></p>
-      <?php endif; ?>
+<main class="descricao-evento-centralizada">
+  <section class="evento-detalhado">
+    <h1><?= htmlspecialchars($evento['nome']) ?></h1>
+    <p><strong>Data:</strong> <?= date('d/m/Y', strtotime($evento['data_evento'])) ?></p>
+    <p><strong>Tipo:</strong> <?= htmlspecialchars($evento['tipo']) ?></p>
+    <p><strong>Valor:</strong> <?= $evento['tipo'] === 'Gratuito' ? 'Gratuito' : 'R$ ' . number_format($evento['valor'], 2, ',', '.') ?></p>
 
-      <?php if (isset($_SESSION['usuario_logado'])): ?>
-        <form method="POST">
-          <button type="submit">Inscrever-se</button>
-        </form>
-      <?php else: ?>
-        <p><a href="login.php">Faça login</a> para se inscrever neste evento.</p>
-      <?php endif; ?>
+    <?php if (!empty($evento['imagem'])): ?>
+      <img src="<?= htmlspecialchars($evento['imagem']) ?>" alt="Imagem do evento" class="imagem-evento">
+    <?php endif; ?>
 
-      <a href="index.php"><button>Voltar para a página inicial</button></a>
-    </section>
-  </main>
+    <h2>Descrição</h2>
+    <p><?= nl2br(htmlspecialchars($evento['descricao'])) ?></p>
+
+    <?php if (isset($mensagem)): ?>
+      <p class="mensagem"><?= $mensagem ?></p>
+    <?php endif; ?>
+
+    <?php if (isset($_SESSION['usuario_logado'])): ?>
+      <form method="POST">
+        <button type="submit" class="botao">Inscrever-se</button>
+      </form>
+    <?php else: ?>
+      <p><a href="login.php" class="botao">Faça login</a> para se inscrever neste evento.</p>
+    <?php endif; ?>
+
+  </section>
+</main>
 
 </body>
 </html>

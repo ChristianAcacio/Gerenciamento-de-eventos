@@ -79,30 +79,28 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <main>
 
   <!-- Slider -->
-  <section class="slider">
+<section class="slider">
     <div class="slider-content">
-      <input type="radio" name="btn-radio" id="radio1" checked />
-      <input type="radio" name="btn-radio" id="radio2" />
-      <input type="radio" name="btn-radio" id="radio3" />
-      <input type="radio" name="btn-radio" id="radio4" />
+        <input type="radio" name="btn-radio" id="radio1" checked />
+        <input type="radio" name="btn-radio" id="radio2" />
+        <input type="radio" name="btn-radio" id="radio3" />
+        <input type="radio" name="btn-radio" id="radio4" />
 
-      <div class="slides-box">
-        <div class="slide-box"><img src="style/img/Expocrato_Banner.jpg" alt="Expocrato" /></div>
-        <div class="slide-box"><img src="style/img/Design sem nome.png" alt="Pau da Bandeira" /></div>
-        <div class="slide-box"><img src="style/img/Juaforro.jpg" alt="Jua Forró" /></div>
-        <div class="slide-box"><img src="style/img/Romaria.webp" alt="Romaria de Juazeiro" /></div>
-      </div>
+        <div class="slides-box">
+            <div class="slide-box"><img src="style/img/Expocrato_Banner.jpg" alt="Expocrato" /></div>
+            <div class="slide-box"><img src="style/img/Design sem nome.png" alt="Pau da Bandeira" /></div>
+            <div class="slide-box"><img src="style/img/Juaforro.jpg" alt="Jua Forró" /></div>
+            <div class="slide-box"><img src="style/img/Romaria.webp" alt="Romaria de Juazeiro" /></div>
+        </div>
     </div>
-  </section>
+</section>
 
-  <!-- Navegação do slider manual -->
-  <nav class="nav-manual" id="nav-slider">
+<nav class="nav-manual" id="nav-slider">
     <label for="radio1" class="manual-btn"></label>
     <label for="radio2" class="manual-btn"></label>
     <label for="radio3" class="manual-btn"></label>
     <label for="radio4" class="manual-btn"></label>
-  </nav>
-
+</nav>
   <!-- Datas -->
   <section class="organizar-datas">
     <div class="datas-background">

@@ -280,100 +280,97 @@ body.cadastro {
     transform: scale(1.05);
 }
 
-header{
-  background-color: #6c63ff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center; /* Alinha verticalmente */
-  padding: 20px;
-  position: relative; /* Importante para posicionamento */
-}
-
-.header-right {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}
-
-.nav-login {
-  margin-left: auto; /* Empurra o menu para a direita */
-}   
-
-.login_icone img a{
-    display: none;
-}
-
-.login_icone_img{
-    height: 40px;
-    width: 40px;
-}
-
-.search_header{
+.header {
+    background-color: #6c63ff;
     display: flex;
-    flex-direction: row;
-    gap: 15px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
+    padding: 15px 30px;
+    position: relative;
 }
 
-.search{
+.nav_pc {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    gap: 15px;
-    margin-top: 10px;
-}
-
-
-
-header input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: none;
-    outline: none;
-    background: rgba(255, 255, 255, 0.6);
-    font-size: 14px;
-    transition: all 0.3s ease;
-}
-
-header input:focus {
-    background: white;
-    box-shadow: 0 0 0 2px #6c63ff;
-}
-
-.nav_pc a{
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
-.nav_pc li{
-    text-decoration: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
     list-style: none;
-    transition: 0.5s ease;
 }
 
-.nav_pc li:hover{
-    transform: scale(1.05);
-    cursor: pointer;
+.nav_pc a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s;
+    padding: 8px 12px;
+    border-radius: 4px;
 }
 
+.nav_pc a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
 
-.nav_pc{
+.search {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-top: 0px;
-
+    gap: 15px;
 }
+
+.search input {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    font-size: 14px;
+    min-width: 180px;
+}
+
+.search input:focus {
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 2px rgba(108, 99, 255, 0.5);
+}
+
+.login_icone_img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+
+.login_icone_img:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 900px) {
+    .header {
+        flex-wrap: wrap;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .nav_pc {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .search {
+        order: 3;
+        width: 100%;
+    }
+    
+    .search input {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
 
 
 
@@ -880,7 +877,7 @@ header input:focus {
 }
 
 .botao:hover {
-    background-color: #1a0c9a;
+    background-color: white;
     transform: scale(1.05);
 }
 
@@ -1019,6 +1016,68 @@ header input:focus {
     cursor: pointer;
     transform: scale(1.05);
 }
+
+.descricao-evento-centralizada {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    background-color: #f2f2f2;
+}
+
+.evento-detalhado {
+    background-color:#6c63ff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 100%;
+    text-align: center;
+}
+
+.evento-detalhado h1 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.evento-detalhado p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: white;
+}
+
+.imagem-evento {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: white;
+    color: #6c63ff;
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #4e47d1;
+}
+
+.mensagem {
+    margin-top: 20px;
+    color: green;
+    font-weight: bold;
+}
+
 
 
 

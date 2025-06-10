@@ -1,3 +1,10 @@
+<?php
+session_start();
+include('php/conexao.php');
+
+$tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -10,73 +17,58 @@
 <body class="principal">
 
     <header class="header">
+  <div class="logo">
+    <a href="index.php">
+      <img class="logo_img" src="style/img/Logo.png" alt="Logo do site" />
+    </a>
+  </div>
 
-        <picture class="logo">
-            <a href="index.php">
-                <img class="logo_img" src="style/img/Logo.png" alt="LOGO DO SITE">
-            </a>
-        </picture>
-
-        <div>
-
-            <ul class="nav_pc">
+  <div class="header-right">
 
 
-                <ol>
-                    <a href="Meus_eventos.php">Meus eventos</a>
-                </ol>
-
-                <ol>
-                    <a href="cadastro_eventos.php">Cadastrar um evento</a>
-                </ol>
-
-                <ol>
-                    <a href="validacao.php">Validação de eventos</a>
-                </ol>
-            </ul>
-
-        </div>
-
-        <div>
+    <!-- Menu principal -->
+    <nav class="nav-login">
+      <ul class="nav_pc">
+        <?php if ($tipo_usuario): ?>
+          <li><a href="Meus_eventos.php">Meus Eventos</a></li>
+            <?php if ($tipo_usuario === 'admin'): ?>
+              <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
+              <li><a href="validacao.php">Validação de eventos</a></li>
+            <?php endif; ?>
             <form action="#" class="search">
-
-                <div class="search_header">            
-                    <div>
-                        <input name="pesquisa" type="list" placeholder="Buscar Eventos">
-                    </div>
-
-
-                    <div>
-                        <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione">
-                        <datalist id="cidades">
-                        <option value="Juazeiro do Norte">
-                        </datalist>
-                    </div>
-                </div>
-
-                <div>
-                    <ul>
-                        <ol>
-                            <picture class="login_icone" >
-                                <a href="login.php">
-                                    <img class="login_icone_img" src="style/img/user-interface.png" alt="Imagem de login" >
-                                </a>
-                            </picture>
-                        </ol>
-                    </ul>
-                </div>
-
+              <div>
+                <input name="pesquisa" type="search" placeholder="Buscar Eventos" />
+              </div>
+              <div>
+                <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione" />
+                  <datalist id="cidades">
+                  <option value="Juazeiro do Norte">
+                </datalist>
+              </div>
             </form>
-        </div>
-
-        <div class="menu_nav" id="menu_nav">
-            <div class="menu_nav_content">
-                <a href="validacao.php">Validação de eventos</a>
-                <a href="Meus_eventos.php">Meus eventos</a>
-                <a href="#">Cadastrar eventos</a>
-            </div>
-        </div>
-    </header>
+          <li><a href="php/logout.php">Logout</a></li>
+        <?php else: ?>
+            <form action="#" class="search">
+              <div>
+                <input name="pesquisa" type="search" placeholder="Buscar Eventos" />
+              </div>
+              <div>
+                <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione" />
+                  <datalist id="cidades">
+                  <option value="Juazeiro do Norte">
+                </datalist>
+              </div>
+            </form>
+          <li>        
+            <a href="login.php" class="login-icon">
+              <img class="login_icone_img" src="style/img/user-interface.png" alt="Ícone de login">
+            </a>
+          </li>
+        <?php endif; ?>
+      </ul>
+    </nav>
+  </div>
+</header>
 
     <main class="background-cadastro-evento">
         <section>
