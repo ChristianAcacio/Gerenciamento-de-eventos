@@ -79,35 +79,47 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <main>
 
   <!-- Slider -->
-<section class="slider">
-    <div class="slider-content">
-        <input type="radio" name="btn-radio" id="radio1" checked />
-        <input type="radio" name="btn-radio" id="radio2" />
-        <input type="radio" name="btn-radio" id="radio3" />
-        <input type="radio" name="btn-radio" id="radio4" />
-
-        <div class="slides-box">
-            <div class="slide-box"><img src="style/img/Expocrato_Banner.jpg" alt="Expocrato" /></div>
-            <div class="slide-box"><img src="style/img/Design sem nome.png" alt="Pau da Bandeira" /></div>
-            <div class="slide-box"><img src="style/img/Juaforro.jpg" alt="Jua Forró" /></div>
-            <div class="slide-box"><img src="style/img/Romaria.webp" alt="Romaria de Juazeiro" /></div>
+        <div class="slider">
+            <div class="slider-content">
+                
+                <input type="radio" name="btn-radio" id="radio1" checked>
+                <input type="radio" name="btn-radio" id="radio2">
+                <input type="radio" name="btn-radio" id="radio3">
+                <input type="radio" name="btn-radio" id="radio4">
+        
+                <div class="slides-box">
+                    <div class="slide-box">
+                        <img src="style/img/Expocrato_Banner.jpg" alt="Expocrato">
+                    </div>
+                    <div class="slide-box">
+                        <img src="style/img/Design sem nome.png" alt="Pau da Bandeira">
+                    </div>
+                    <div class="slide-box">
+                        <img src="style/img/Juaforro.jpg" alt="Jua Forró">
+                    </div>
+                    <div class="slide-box">
+                        <img src="style/img/Romaria.webp" alt="Romaria de juazerio">
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-</section>
 
-<nav class="nav-manual" id="nav-slider">
-    <label for="radio1" class="manual-btn"></label>
-    <label for="radio2" class="manual-btn"></label>
-    <label for="radio3" class="manual-btn"></label>
-    <label for="radio4" class="manual-btn"></label>
-</nav>
+        <div class="nav-manual" id="nav-slider">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
+        </div>
+
+
+        
   <!-- Datas -->
   <section class="organizar-datas">
     <div class="datas-background">
-      <div class="datas"><span>01/04</span><span>Terça-feira</span></div>
-      <div class="datas"><span>02/04</span><span>Quarta-feira</span></div>
-      <div class="datas"><span>03/04</span><span>Quinta-feira</span></div>
-      <div class="datas"><span>04/04</span><span>Sexta-feira</span></div>
+      <div class="datas"><span>21/06</span><span>Terça-feira</span></div>
+      <div class="datas"><span>30/06</span><span>Quarta-feira</span></div>
+      <div class="datas"><span>14/07</span><span>Quinta-feira</span></div>
+      <div class="datas"><span>28/07</span><span>Sexta-feira</span></div>
       <div class="datas"><span>CALENDÁRIO</span></div>
     </div>
   </section>

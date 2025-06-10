@@ -1160,27 +1160,48 @@ body.cadastro {
 
 /*Estilo CRIAÇÃO DE EVENTOS*/
 
-.cadastro-evento {
-    display: flex;
-    margin-top: 100px;
-    margin-bottom: 50px;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 80%;
-    height: 80%;
-    background-color: #6c63ff;
-    color: white;
-    border-radius: 15px;
-    padding: 50px;
-    gap: 100px;
+.background-cadastro-evento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
 }
 
+.cadastro-evento {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #6c63ff;
+  color: white;
+  border-radius: 15px;
+  padding: 80px;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+  flex-wrap: wrap;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
 
-.imagem_label{
-    width: 150px;
-    height: 150px;
-    background-color: #6c63ff;
-    border: 2px black;
+.cadastro-evento-esquerda,
+.cadastro-evento-direita {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cadastro-evento-esquerda h1 {
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.cadastro-evento input,
+.cadastro-evento textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-size: 14px;
 }
 
 .textarea{
@@ -1188,65 +1209,48 @@ body.cadastro {
     flex-direction: column;
 }
 
-.textarea_label{
-    height: 150px;
+.fildset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.fildset{
-    border: none;
-    display: flex;
+.btn_link_cadastrar {
+  padding: 10px;
+  background-color: white;
+  color: #6c63ff;
+  border: none;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn_link_cadastrar:hover {
+  background-color: #dcdcdc;
+  transform: scale(1.05);
+}
+
+.imagem_label {
+  background-color: white;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.textarea_label {
+  height: 120px;
+  resize: vertical;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .cadastro-evento {
     flex-direction: column;
+    padding: 20px;
+  }
 }
 
-
-.background-cadastro-evento{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-.cadastro-evento-esquerda{
-    gap: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-}
-
-.evento-esquerda{
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-}
-
-.cadastro-evento-esquerda h1{
-    margin-bottom: 50px;
-}
-
-.cadastro-evento-esquerda input{
-    background-color: white;
-    height: 30px;
-}
-
-
-.cadastro-evento h1{
-    margin-bottom: 50px;
-}
-
-.cadastro-evento input{
-    height: 30px;
-}
-
-.cadastro-evento-direita{
-    display: flex;
-    flex-direction: column;
-    gap: 80px;
-    margin-top: 130px;
-}
-
-.cadastro-imagem button{
-    display: none;
-}
 
 
 
