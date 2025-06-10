@@ -1225,6 +1225,9 @@ body.cadastro {
   font-weight: bold;
   cursor: pointer;
   transition: 0.3s;
+  width: 100px;
+  height: 40px;
+  text-decoration: none;
 }
 
 .btn_link_cadastrar:hover {

@@ -84,7 +84,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
 
                     <div>
                         <label for="data_inicio">Data do evento:</label>
-                        <input type="date" id="data_inicio" name="data_evento" required>
+                        <input type="date" id="data_inicio" name="data_evento" min="2025-06-10" required>
                     </div>
 
                     <fieldset class="fildset">
@@ -97,7 +97,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
 
                     <div>
                         <label for="valor">Valor do Evento:</label>
-                        <input type="text" id="valor" name="valor" placeholder="R$ 00,00">
+                        <input type="text" id="valor" name="valor" placeholder="R$ 00,00" class="campo-valor">
                     </div>
                 </div>
 
@@ -112,13 +112,41 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
                         <textarea id="descricao" name="descricao" placeholder="Detalhe todas as informações do evento" required class="textarea_label"></textarea>
                     </div>
 
-                    <button class="btn_link_cadastrar" type="submit">Cadastrar</button>
+                    <button class="btn_link_cadastrar " type="submit">Cadastrar</button>
 
                 </div>
                 
             </form>
         </section>
     </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          const radios = document.querySelectorAll('input[name="entrada"]');
+          const campoValor = document.getElementById("valor");
+          const campoValorContainer = campoValor.closest("div");
+
+          function verificarEntrada() {
+              const selecionado = document.querySelector('input[name="entrada"]:checked').value;
+              if (selecionado === "Gratuito") {
+                  campoValorContainer.style.display = "none";
+                  campoValor.value = "0";
+              } else {
+                  campoValorContainer.style.display = "block";
+                  campoValor.value = "";
+              }
+          }
+
+          // Executa ao carregar a página
+          verificarEntrada();
+
+          // Adiciona evento de mudança
+          radios.forEach(radio => {
+              radio.addEventListener("change", verificarEntrada);
+          });
+      });
+  </script>
+
 
 </body>
 </html>
