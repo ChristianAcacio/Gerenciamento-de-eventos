@@ -83,12 +83,12 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
                 <div class="cadastro-evento-esquerda">
                     <h1>Cadastre seu evento</h1>
 
-                    <div>
+                    <div class="input_cadastroeventos">
                         <label for="nome">Nome do Evento:</label>
                         <input type="text" id="nome" name="nome" placeholder="Nome do seu evento" required>
                     </div>
 
-                    <div>
+                    <div class="input_cadastroeventos">
                         <label for="data_inicio">Data do evento:</label>
                         <input type="date" id="data_inicio" name="data_evento" min="2025-06-10" required>
                     </div>
@@ -113,7 +113,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
                         <input type="file" id="imagem" name="imagem" accept="image/*" required class="imagem_label">
                     </div>
 
-                    <div class="cidade_evento">
+                    <div class="input_cadastroeventos">
                         <label for="nome">Cidade do evento:</label>
                         <input type="text" id="cidade" name="cidade" placeholder="Local do evento" required>
                     </div>

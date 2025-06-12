@@ -1241,7 +1241,11 @@ body.cadastro {
     max-width: 1200px;
     text-align: left;
     padding-left: 10px;
-  }
+}
+
+
+
+
 
 
 /*Estilo CRIAÇÃO DE EVENTOS*/
@@ -1291,10 +1295,12 @@ body.cadastro {
   font-size: 14px;
 }
 
-.cidade_evento{
-    display: flex;
+.input_cadastroeventos{
+    width: 300px;
+    display: flex; 
     flex-direction: column;
 }
+
 
 .textarea{
     display: flex;
@@ -1339,29 +1345,19 @@ body.cadastro {
 }
 
 /* Responsivo */
-@media (max-width: 768px) {
-  .cadastro-evento {
-    flex-direction: column;
-    padding: 20px;
-  }
+@media (max-width: 900px) {
+    .cadastro-evento {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: #6c63ff;
+        color: white;
+        border-radius: 15px;
+        padding: 20px;
+        gap: 40px;
+        max-width: 1000px;
+        width: 100%;
+        flex-wrap: wrap;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
