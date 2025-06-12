@@ -42,7 +42,7 @@
 
                     <div>
                         <label for="data">Data de Nascimento:</label>
-                        <input type="date" name="data">
+                        <input type="date" name="data" max="2025-06-10">
                     </div>
 
                     <div class="senha_div">
@@ -64,22 +64,22 @@
                 <div class="direita">
                     <div>
                         <label for="cep">CEP:</label>
-                        <input type="text" name="cep" placeholder="00000-000" maxlength="9">
+                        <input type="text" name="cep" id="cep" placeholder="00000-000" maxlength="9">
                     </div>
 
                     <div>
                         <label for="cidade">Cidade:</label>
-                        <input type="text" name="cidade" placeholder="Cidade">
+                        <input type="text" name="cidade" id="cidade" placeholder="Cidade">
                     </div>
 
                     <div>
                         <label for="Bairro">Bairro:</label>
-                        <input type="text" name="Bairro" placeholder="Bairro">
+                        <input type="text" name="Bairro" id="bairro" placeholder="Bairro">
                     </div>
 
                     <div>
                         <label for="Estado">Estado:</label>
-                        <input type="text" name="Estado" placeholder="UF (ex: CE)" maxlength="2">
+                        <input type="text" name="Estado" id="uf" placeholder="UF (ex: CE)" maxlength="2">
                     </div>
                 </div>
             </div>
@@ -87,11 +87,38 @@
             <div class="cadastro_buttons" style="margin-top: 30px;">
                 <a href="login.php" class="button2">Voltar</a>
                 <a href="index.html" class="btn_link_cadastrar" type="submit">Cadastrar</a>
+                <button type="submit" class="btn_link_cadastrar">Cadastrar</button>
             </div>
 
         </form>
 
     </main>
+
+    <script>
+        document.getElementById("cep").addEventListener("blur", async function () {
+            const cep = this.value.replace(/\D/g, "");
+
+            if (cep.length === 8) {
+                try {
+                    const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                    const data = await response.json();
+
+                    if (!data.erro) {
+                        document.getElementById("cidade").value = data.localidade;
+                        document.getElementById("bairro").value = data.bairro;
+                        document.getElementById("uf").value = data.uf;
+                    } else {
+                        alert("CEP não encontrado.");
+                    }
+                } catch (e) {
+                    alert("Erro ao buscar o CEP.");
+                }
+            } else {
+                alert("CEP inválido. Digite os 8 números do CEP.");
+            }
+        });
+    </script>
+
 
 </body>
 </html>

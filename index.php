@@ -38,8 +38,14 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <?php if ($tipo_usuario): ?>
           <li><a href="Meus_eventos.php">Meus Eventos</a></li>
             <?php if ($tipo_usuario === 'admin'): ?>
-              <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
-              <li><a href="validacao.php">Validação de eventos</a></li>
+              <div style="display:flex;" class="adm_pc">
+                <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
+                <li><a href="validacao.php">Validação de eventos</a></li>
+              </div>
+              <div style="display: flex;" class="adm_cel">
+                <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
+                <li><a href="validacao.php">Validação de eventos</a></li>
+              </div>
             <?php endif; ?>
             <form action="#" class="search">
               <div>
@@ -120,7 +126,7 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <div class="datas"><span>30/06</span><span>Quarta-feira</span></div>
       <div class="datas"><span>14/07</span><span>Quinta-feira</span></div>
       <div class="datas"><span>28/07</span><span>Sexta-feira</span></div>
-      <div class="datas"><span>CALENDÁRIO</span></div>
+      <div style="display: flex;" class="datas"><span>Calendário</span><span>de eventos</span></div>
     </div>
   </section>
 
