@@ -352,37 +352,46 @@ body.cadastro {
     max-width: 100%;
     overflow-x: hidden;
     }
+    
+    .header a{
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
 
-  .header {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 15px;
-  }
+    .header {
+        flex-wrap: nowrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 15px;
+    }
 
-  .nav_pc {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10px;
-    align-items: center;
-    justify-content: flex-end;
-  }
+    .nav_pc {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+        align-items: center;
+        justify-content: flex-end;
+    }
 
-  .adm_pc {
-    display: none !important;
-  }
+    .adm_pc {
+        display: none !important;
+    }
 
-  .adm_cel {
-    display: flex !important;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 10px;
-  }
+    .adm_cel {
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
 
-  .search {
-    display: none !important;
-  }
+    .search {
+        display: none !important;
+    }
 
 }
 

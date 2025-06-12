@@ -16,7 +16,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
 
 <body class="principal">
 
-    <header class="header">
+<header class="header">
   <div class="logo">
     <a href="index.php">
       <img class="logo_img" src="style/img/Logo.png" alt="Logo do site" />
@@ -32,8 +32,14 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
         <?php if ($tipo_usuario): ?>
           <li><a href="Meus_eventos.php">Meus Eventos</a></li>
             <?php if ($tipo_usuario === 'admin'): ?>
-              <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
-              <li><a href="validacao.php">Validação de eventos</a></li>
+              <div style="display:flex;" class="adm_pc">
+                <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
+                <li><a href="validacao.php">Validação de eventos</a></li>
+              </div>
+              <div style="display: flex;" class="adm_cel">
+                <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
+                <li><a href="validacao.php">Validação de eventos</a></li>
+              </div>
             <?php endif; ?>
             <form action="#" class="search">
               <div>
@@ -46,7 +52,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
                 </datalist>
               </div>
             </form>
-          <li><a href="php/logout.php">Logout</a></li>
+          <li><a style="font-weight:600;" href="php/logout.php">Logout</a></li>
         <?php else: ?>
             <form action="#" class="search">
               <div>
