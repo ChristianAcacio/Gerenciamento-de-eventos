@@ -15,8 +15,9 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
     $nome = $_POST['nome'];
     $data_evento = $_POST['data_evento'];
     $entrada = $_POST['entrada'];
-    $valor = $_POST['valor'];
+    $valor = $_POST['valor'] ?? 0;
     $descricao = $_POST['descricao'];
+    $cidade = $_POST['cidade'] ?? 'Não informado';
 
     // Validação básica
     if (empty($nome) || empty($data_evento) || empty($entrada) || empty($descricao)) {
@@ -34,11 +35,15 @@ if ($_SERVER['REQUEST_METHOD'] == "POST") {
         // Caminho absoluto para salvar o arquivo
         $caminho_salvar = __DIR__ . '/../uploads/' . $nome_arquivo;
 
-        // Caminho relativo salvo no banco
+        // Caminho correto para salvar no banco (sem '/../')
         $imagem_nome = 'uploads/' . $nome_arquivo;
 
-        // Move o arquivo enviado para a pasta de uploads
-        move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho_salvar);
+        // Tenta mover o arquivo
+        if (!move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho_salvar)) {
+            $_SESSION['mensagem'] = "Erro ao salvar a imagem.";
+            header("Location: ../cadastro_eventos.php");
+            exit;
+        }
     }
 
     try {
