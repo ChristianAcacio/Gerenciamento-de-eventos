@@ -408,6 +408,7 @@ body.cadastro {
 
 
 
+
 .slider_back{
     padding-bottom: 20px ;
 }
@@ -477,6 +478,8 @@ body.cadastro {
         left: 0;
     }
 }
+
+
 
 .nav-manual {
     position: relative;
@@ -691,6 +694,41 @@ body.cadastro {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .eventos-maiores {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .background-eventos {
+        flex-basis: 48%; 
+        max-width: 500px; 
+        padding: 20px;
+        margin: 10px auto;
+        font-size: 16px;
+        box-sizing: border-box;
+        background-color: #6c63ff;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .background-eventos img {
+        max-width: 320px;
+        height: auto;
+        max-height: 280px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .background-eventos button {
+        font-size: 16px;
+    }
+}
+
+
 
 
 
@@ -715,13 +753,16 @@ body.cadastro {
     align-items: center;
 }
 
+
 .validação_titulo{
-    color: white;
+    color: #6c63ff;
     font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-top: 50px;
+    text-align: center;
+
 }
 
 .background_validação{
@@ -772,7 +813,7 @@ body.cadastro {
     cursor: pointer;
     transition: 0.3s ease;
     margin-bottom: 10px;
-    color: rgb(61, 255, 61);
+    color: rgb(0, 105, 0);
 }
 
 .rejeitar{
@@ -827,6 +868,53 @@ body.cadastro {
     height: 100px;
     width: 100px;
 }
+
+@media (max-width: 900px) {
+    .background_validação {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        gap: 30px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .validação_imagem img {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .validação_texto {
+        padding: 15px;
+    }
+
+    .opções {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .aprovar, .rejeitar {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .aprovado {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .aprovado .aprovado_texto {
+        padding-left: 0;
+        text-align: center;
+    }
+}
+
 
 
 
