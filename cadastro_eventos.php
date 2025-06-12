@@ -103,7 +103,7 @@ $tipo_usuario = $_SESSION['tipo_usuario'] ?? null;
 
                     <div>
                         <label for="valor">Valor do Evento:</label>
-                        <input type="number" id="valor" name="valor" placeholder="R$ 00,00" class="campo-valor" min="0.01">
+                        <input type="number" id="valor" name="valor" placeholder="R$ 00,00" class="campo-valor" min="0.00">
                     </div>
                 </div>
 
