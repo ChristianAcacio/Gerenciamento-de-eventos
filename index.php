@@ -37,12 +37,12 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <li><a href="cadastro_eventos.php">Cadastrar um evento</a></li>
             <li><a href="validacao.php">Validação de eventos</a></li>
           <?php endif; ?>
-                <form action="#" class="search">
-      <div>
-        <input name="pesquisa" id="busca-evento" type="search" placeholder="Buscar Eventos" />
-        </div>
+          <form action="#" class="search">
             <div>
-                <input list="cidades" id="cidade" name="cidade" placeholder="Digite ou selecione" />
+              <input name="pesquisa" id="busca-evento" type="search" placeholder="Buscar Eventos" />
+            </div>
+            <div>
+                <input list="cidades" id="cidade" name="cidade" placeholder="Cidades" />
                 <datalist id="cidades">
                     <option value="Juazeiro do Norte">
                 </datalist>
@@ -50,7 +50,22 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </form>
           <li><a style="font-weight:600;" href="php/logout.php">Logout</a></li>
         <?php else: ?>
-          <li><a href="login.php">Login</a></li>
+            <form action="#" class="search">
+            <div>
+              <input name="pesquisa" id="busca-evento" type="search" placeholder="Buscar Eventos" />
+            </div>
+            <div>
+                <input list="cidades" id="cidade" name="cidade" placeholder="Cidades" />
+                <datalist id="cidades">
+                    <option value="Juazeiro do Norte">
+                </datalist>
+            </div>
+            </form>
+            <a href="login.php" class="login-icon">
+              <img class="login_icone_img" src="style/img/user-interface.png" alt="Ícone de login">
+            </a>
+        </li>
+          
         <?php endif; ?>
       </ul>
     </nav>
