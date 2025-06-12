@@ -52,7 +52,7 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 </datalist>
               </div>
             </form>
-          <li><a href="php/logout.php">Logout</a></li>
+          <li><a style="font-weight:600;" href="php/logout.php">Logout</a></li>
         <?php else: ?>
             <form action="#" class="search">
               <div>
@@ -78,7 +78,7 @@ $eventos_aprovados = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 <main>
 
-  <!-- Slider -->
+
         <div class="slider">
             <div class="slider-content">
                 
